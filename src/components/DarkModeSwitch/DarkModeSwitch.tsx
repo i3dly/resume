@@ -35,9 +35,9 @@ export const DarkModeSwitch: FC<DarkModeSwitchProps> = ({ className, style }) =>
 			style={style}
 		>
 			{checked ? (
-				<HiOutlineMoon className="h-6 w-6 text-sky-500" height={24} width={24} />
+				<HiOutlineMoon className="h-6 w-6 text-black dark:text-sky-500" height={24} width={24} />
 			) : (
-				<HiOutlineSun className="h-6 w-6 text-black" height={24} width={24} />
+				<HiOutlineSun className="h-6 w-6 text-black dark:text-sky-500" height={24} width={24} />
 			)}
 		</Switch>
 	);
