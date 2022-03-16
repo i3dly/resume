@@ -6,6 +6,7 @@ export * from "./DarkModeSwitch";
 export * from "./DownloadButton";
 export * from "./LetterPage";
 export * from "./PageContainer";
+export * from "./ResumeLink";
 export * from "./SideBar";
 export * from "./SideBarDivider";
 export * from "./SideBarHeader";

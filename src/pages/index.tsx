@@ -6,6 +6,7 @@ import {
 	DownloadButton,
 	LetterPage,
 	PageContainer,
+	ResumeLink,
 	SideBar,
 	SideBarDivider,
 	SideBarHeader,
@@ -28,6 +29,7 @@ import {
 } from "react-icons/fa";
 
 const data = {
+	link: "https://resume.leedavidcs.dev",
 	name: "David Lee",
 	jobTitle: "Senior Software Engineer",
 	sites: {
@@ -502,6 +504,7 @@ export const Page: NextPage = () => {
 							<span>Graduated: {dayjs(data.education.endDate).format("MMMM YYYY")}</span>
 						</div>
 					</div>
+					{!!data.link && <ResumeLink link={data.link} />}
 				</SideBar>
 			</LetterPage>
 			{data.experience.slice(1).map((experiences, i) => (
@@ -557,7 +560,9 @@ export const Page: NextPage = () => {
 							"flex-shrink-0 flex flex-col gap-4",
 							"w-1/3 p-4"
 						)}
-					/>
+					>
+						{!!data.link && <ResumeLink link={data.link} />}
+					</SideBar>
 				</LetterPage>
 			))}
 		</PageContainer>

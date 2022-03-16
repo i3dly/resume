@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import React, { CSSProperties, FC, forwardRef, ReactNode } from "react";
+import React, { CSSProperties, forwardRef, ReactNode } from "react";
 
 export interface LetterPageProps {
 	children?: ReactNode;
