@@ -31,7 +31,7 @@ import {
 const data = {
 	link: "https://resume.leedavidcs.dev",
 	name: "David Lee",
-	jobTitle: "Senior Software Engineer",
+	jobTitle: "Staff Software Engineer",
 	sites: {
 		email: "jobs.lee.david.cs@gmail.com",
 		linkedin: "https://linkedin.com/in/leedavidcs",
@@ -59,18 +59,20 @@ const data = {
 			"HTML5",
 			"CSS3",
 			"React",
-			"Apollo Client",
 			"Urql",
+			"Apollo Client",
 			"Styled-Components",
 			"Tailwind CSS",
 			"Visx",
 			"D3",
-			"Storybook",
+			"Recharts",
 			"Framer Motion",
+			"Storybook",
 			"Redux",
 			"React-Three-Fiber",
 			"React-Window",
 			"Slate",
+			"Prism",
 			"Radix",
 			"Headless UI",
 			"Reakit"
@@ -87,45 +89,82 @@ const data = {
 			"Nexus",
 			"Express",
 			"Serverless",
-			"DataLoader"
+			"DataLoader",
+			"NextAuth"
 		],
-		etc: [
+		tooling: [
 			"Linux",
+			"Mac",
 			"Git",
-			"GitHub Actions",
+			"VSCode",
+			"Figma",
+			"Zeplin",
+			"SourceTree",
+			"Webpack",
+			"pnpm workspaces",
 			"Turborepo",
 			"Lerna",
-			"pnpm workspaces",
 			"Docker",
-			"Jest",
 			"Cypress",
-			"Webpack",
-			"Prettier",
+			"Jest",
 			"ESLint",
+			"Prettier",
+			"GraphQL-Codegen",
 			"Jira",
 			"Confluence",
 			"Notion",
-			"Google Analytics",
 			"Amplitude",
-			"GraphQL-Codegen",
-			"Figma",
-			"Algolia",
-			"Stripe",
-			"Twilio",
+			"Segment",
 			"Sentry",
-			"Postmark",
-			"Cloudinary",
-			"Vercel",
-			"Netlify",
+			"Google Analytics",
+			"GitHub Actions",
 			"PlanetScale",
 			"Upstash",
+			"Postmark",
 			"Octokit",
+			"Algolia",
+			"Pusher",
+			"Stripe",
+			"Twilio",
+			"GraphCDN",
+			"Cloudinary",
 			"Cloudflare",
-			"Lambda",
-			"CloudFront",
-			"CloudWatch",
+			"Vercel",
+			"Netlify",
+			"S3",
 			"RDS",
-			"S3"
+			"ElastiCache",
+			"Lambda",
+			"API Gateway",
+			"Amplify",
+			"Elastic Beanstalk",
+			"CloudFront",
+			"CloudWatch"
+		],
+		concepts: [
+			"SEO",
+			"Accessibility",
+			"Site Performance",
+			"ISR",
+			"SSR",
+			"Static Caching",
+			"Image Optimizations",
+			"Atomic Design Systems",
+			"Code-splitting",
+			"Lazy-loading",
+			"JWT Auth",
+			"API Permissions",
+			"API Design",
+			"API Caching",
+			"GraphQL APQ",
+			"Relay Connections",
+			"DB Normalization",
+			"IP Blacklisting",
+			"Rate Limiting",
+			"Concurrency",
+			"DB Seeding",
+			"API Mocking",
+			"Monorepos",
 		]
 	},
 	education: {
@@ -137,7 +176,7 @@ const data = {
 		[
 			{
 				company: "Openbase",
-				jobTitle: "Senior Frontend Engineer",
+				jobTitle: "Staff Frontend Engineer",
 				startDate: "04/01/2021",
 				endDate: null,
 				highlights: [
@@ -154,23 +193,19 @@ const data = {
 						Storybook, Codegen and Tailwind CSS.
 					`,
 					oneLine`
-						Integrated Algolia onto the frontend, then authored and published an
-						article about it onto Algolia's engineering blog.
+						Created an Algolia-Apollo interoperability module to power Openbase's search,
+						then authored and published an article about it onto Algolia's engineering blog.
 					`,
 					oneLine`
-						Implemented pages for packages, categories, user-profiles, search and more.
-					`,
-					oneLine`
-						Created a service with Serverless Framework to handle redirects from old
-						URLs for SEO with logging on CloudWatch.
+						Implemented the majority of the frontend application, including pages for
+						packages, categories, user-profiles, search and more.
 					`,
 					oneLine`
 						Participated in product feature ideation to drive user aquisition and
 						retention.
 					`,
 					oneLine`
-						Mentored developers in Next.js, Apollo Client, Styled-Components,
-						TypeScript and more.
+						Mentored developers in Next.js, Apollo Client, Styled-Components, and more.
 					`
 				]
 			},
@@ -181,9 +216,9 @@ const data = {
 				endDate: null,
 				highlights: [
 					oneLine`
-						Built with Next.js, NextAuth, Prisma, Nexus, Apollo Server, Urql,
-						Styled-Components, TailwindCSS, Twin Macro, PlanetScale, Upstash, Pusher,
-						Octokit, Cloudinary and Figma.
+						Built with Next.js, NextAuth, Prisma, Nexus, Apollo Server,
+						Styled-Components, Twin.Macro, TailwindCSS, Urql, Storybook, PlanetScale,
+						Upstash, Cloudinary, Postmark, Pusher, Octokit and Figma.
 					`,
 					oneLine`
 						Ported the yarn monolith to a monorepo with pnpm workspaces and Turborepo.
@@ -196,6 +231,12 @@ const data = {
 					oneLine`
 						Improved accessibility with support for screen-readers and keyboard
 						navigation with Radix and Headless UI.
+					`,
+					oneLine`
+						Implemented GraphQL resolvers for: activity feeds, GitHub follows,
+						Cloudinary image uploads, Pusher real-time chat, GitHub skill and user
+						search, connection suggestions, notifications, nested commenting, and CRUD
+						with Nexus + Prisma.
 					`
 				]
 			},
@@ -207,13 +248,17 @@ const data = {
 				highlights: [
 					oneLine`
 						Designed in Figma, and created an atomic design system without using any
-						ui-toolkits or CSS framework, while improving accessibility and minimizing
-						client bundle size.
+						ui-toolkits, while improving accessibility and minimizing client bundle
+						size.
 					`,
 					oneLine`
 						Authored an internal charting library with Visx, a data-grid library with
 						React-Window, responsive emails with Mjml, animations with Framer-Motion,
 						and more.
+					`,
+					oneLine`
+						Created several GraphQL-Nexus plugins to rate-limit fields, validate inputs,
+						and prevent malicious queries with complexity and depth limits.
 					`,
 					oneLine`
 						Coded over 300 components and 400 stories on Storybook, with snapshot
@@ -228,9 +273,9 @@ const data = {
 					`,
 					oneLine`
 						Implemented GraphQL resolvers for: full-text search with Algolia, emails
-						with Nodemailer, subscriptions and payouts with Stripe, presigned URL image
-						uploads with AWS S3, business hour timezones with Google Maps, and CRUD
-						with Nexus and Prisma.
+						with Nodemailer, subscriptions and payouts with Stripe, presigned URL
+						uploads with S3, localized timezones with Google Maps, and CRUD with Nexus
+						+ Prisma.
 					`
 				]
 			}
@@ -243,12 +288,12 @@ const data = {
 				endDate: "01/01/2020",
 				highlights: [
 					oneLine`
-						Migrated the ES5 + AngularJS frontend to TypeScript, React and
-						Styled-Components, with snapshot testing through Jest + Storybook.
+						Migrated the AngularJS + ES5 frontend to React, Styled-Components and
+						TypeScript with snapshot testing through Jest + Storybook.
 					`,
 					oneLine`
 						Proposed then directed the migration of the CoffeeScript + Restify backend
-						monolith to TypeScript, Apollo, Serverless-Http + GraphQL that would allow
+						monolith to TypeScript, Apollo Server and Serverless-Http that would allow
 						for incremental adoption for frontend and mobile teams.
 					`,
 					oneLine`
@@ -283,7 +328,7 @@ const data = {
 					`,
 					oneLine`
 						Architected Bassett Furniture's new consumer site with TypeScript, React,
-						Redux, Redux Observable, JSS and BabylonJS.
+						Redux, Redux Observable and JSS.
 					`,
 					oneLine`
 						Authored an internal library to gradually migrate a legacy vanilla ES5 app
@@ -292,6 +337,10 @@ const data = {
 					oneLine`
 						Built a sectional-sofa builder for Bassett Furniture's website for
 						customers to build their custom sofa and checkout to cart.
+					`,
+					oneLine`
+						Set-up a CI/CD pipeline with lint, build and test steps using TravisCI,
+						SonarQube, Jest and ESLint.
 					`
 				]
 			},
@@ -302,13 +351,16 @@ const data = {
 				endDate: "12/01/2017",
 				highlights: [
 					oneLine`
-						Build data-grids, dashboards and internal tools for the normalization,
-						aggregation, and visualization of financial data using 3rd-party market
-						data APIs. 
+						Interfaced with non-technical financial analysts to gather requirements,
+						produce technical specifications and build financial tools.
 					`,
 					oneLine`
-						Interfaced with non-technical financial analysts to gather requirements,
-						translate those into technical specifications and build financial tools.
+						Built data-grids, dashboards and internal tools to normalize, aggregate
+						and visualize financial data using 3rd-party market data APIs.
+					`,
+					oneLine`
+						Put together a CI/CD pipeline with lint, build and test steps using
+						CircleCI, Mocha, Codecov and ESLint.
 					`
 				]
 			},
@@ -319,15 +371,12 @@ const data = {
 				endDate: "06/01/2016",
 				highlights: [
 					oneLine`
-						Created a form where clients can send support requests or questions,
-						and employees can receive, sort and answer them from an internal portal.
+						Created forms for clients to send questions and support requests, and for
+						employees to receive, filter and answer them from an internal portal.
 					`,
 					oneLine`
-						Converted non-technical requirements into wireframes and actionable tasks.
-					`,
-					oneLine`
-						Built several pages, forms and data visualization modules for the company's
-						revamped website.
+						Converted wireframes and mocks into several built pages, forms and charts
+						for the company's revamped website.
 					`
 				]
 			}
@@ -368,7 +417,7 @@ export const Page: NextPage = () => {
 							<Avatar />
 						</div>
 						<div className="flex-grow basis-0 min-w-0">
-							<h1 className="text-3xl leading-none font-medium">{data.name}</h1>
+							<h1 className="text-3xl leading-none font-semibold">{data.name}</h1>
 							<h2 className="text-gray-600 dark:text-gray-300/80">{data.jobTitle}</h2>
 							<div
 								className={clsx(
@@ -487,21 +536,17 @@ export const Page: NextPage = () => {
 								</p>
 							</div>
 							<div className="text-xs leading-snug">
-								<SideBarSubHeader>Tooling + Misc.</SideBarSubHeader>
+								<SideBarSubHeader>Tooling + Services</SideBarSubHeader>
 								<p className="mt-2">
-									{data.skills.etc.join(", ")}
+									{data.skills.tooling.join(", ")}
 								</p>
 							</div>
-						</div>
-					</div>
-					<SideBarDivider />
-					<div>
-						<SideBarHeader>Education</SideBarHeader>
-						<SideBarSubHeader>{data.education.degree}</SideBarSubHeader>
-						<div className="text-xs mt-2">{data.education.college}</div>
-						<div className="flex items-center gap-2 mt-1 text-xs">
-							<FaCalendarAlt />
-							<span>Graduated: {dayjs(data.education.endDate).format("MMMM YYYY")}</span>
+							<div className="text-xs leading-snug">
+								<SideBarSubHeader>Concepts + Misc.</SideBarSubHeader>
+								<p className="mt-2">
+									{data.skills.concepts.join(", ")}
+								</p>
+							</div>
 						</div>
 					</div>
 					{!!data.link && <ResumeLink link={data.link} />}
@@ -561,6 +606,15 @@ export const Page: NextPage = () => {
 							"w-1/3 p-4"
 						)}
 					>
+						<div>
+							<SideBarHeader>Education</SideBarHeader>
+							<SideBarSubHeader>{data.education.degree}</SideBarSubHeader>
+							<div className="text-xs mt-2">{data.education.college}</div>
+							<div className="flex items-center gap-2 mt-1 text-xs">
+								<FaCalendarAlt />
+								<span>Graduated: {dayjs(data.education.endDate).format("MMMM YYYY")}</span>
+							</div>
+						</div>
 						{!!data.link && <ResumeLink link={data.link} />}
 					</SideBar>
 				</LetterPage>
