@@ -139,7 +139,8 @@ const data = {
 			"Amplify",
 			"Elastic Beanstalk",
 			"CloudFront",
-			"CloudWatch"
+			"CloudWatch",
+			"Chromatic"
 		],
 		concepts: [
 			"SEO",
@@ -305,7 +306,7 @@ const data = {
 			},
 			{
 				company: "Outward",
-				jobTitle: "Software Engineer",
+				jobTitle: "Senior Software Engineer",
 				startDate: "01/01/2018",
 				endDate: "01/01/2019",
 				highlights: [
