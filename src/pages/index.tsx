@@ -68,14 +68,14 @@ const data = {
 			"Recharts",
 			"Framer Motion",
 			"Storybook",
-			"Redux",
 			"React-Three-Fiber",
 			"React-Window",
-			"Slate",
-			"Prism",
 			"Radix",
 			"Headless UI",
 			"Reakit"
+			"Redux",
+			"Slate",
+			"Prism"
 		],
 		backend: [
 			"Node.js",
