@@ -72,7 +72,7 @@ const data = {
 			"React-Window",
 			"Radix",
 			"Headless UI",
-			"Reakit"
+			"Reakit",
 			"Redux",
 			"Slate",
 			"Prism"
