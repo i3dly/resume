@@ -36,7 +36,7 @@ const data = {
 		email: "jobs.lee.david.cs@gmail.com",
 		linkedin: "https://linkedin.com/in/leedavidcs",
 		github: "https://github.com/leedavidcs",
-		blog: "https://makepurple.com/blog",
+		blog: "https://makepurple.com/leedavidcs",
 	},
 	summary: stripIndents`
 		${oneLine`
