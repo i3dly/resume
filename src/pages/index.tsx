@@ -54,7 +54,7 @@ const data = {
 	`,
 	skills: {
 		languages: ["TypeScript", "JavaScript"],
-		frameworks: ["Next.js", "Remix", "Gatsby"],
+		frameworks: ["Next.js", "Remix", "Gatsby", "Nest.js"],
 		frontend: [
 			"HTML5",
 			"CSS3",
