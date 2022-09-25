@@ -141,7 +141,8 @@ const data = {
 			"Elastic Beanstalk",
 			"CloudFront",
 			"CloudWatch",
-			"Chromatic"
+			"Chromatic",
+			"Changesets",
 		],
 		concepts: [
 			"SEO",
