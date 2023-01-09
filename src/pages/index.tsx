@@ -48,13 +48,12 @@ const data = {
 		`}
 		${oneLine`
 			Demonstrated skill in architecting greenfield applications, researching emerging
-			technologies, improving the developer experience, improving site SEO and collaborating
-			in dynamic teams.
+			technologies, improving the developer experience, and working in distributed teams.
 		`}
 	`,
 	skills: {
 		languages: ["TypeScript", "JavaScript"],
-		frameworks: ["Next.js", "Remix", "Gatsby", "Nest.js"],
+		frameworks: ["Next.js", "Astro", "Remix", "Gatsby", "Nest.js"],
 		frontend: [
 			"HTML5",
 			"CSS3",
@@ -79,19 +78,19 @@ const data = {
 		],
 		backend: [
 			"Node.js",
+			"Cloudflare Workers",
+			"Serverless",
 			"GraphQL",
-			"Apollo Server",
+			"tRPC",
 			"Prisma",
 			"Nexus",
-			"Redis",
-			"tRPC",
-			"NextAuth",
 			"Postgres",
 			"MongoDB",
-			"Socket.io",
+			"Redis",
+			"Apollo Server",
 			"Express",
-			"Serverless",
-			"DataLoader",
+			"Socket.io",
+			"NextAuth",
 		],
 		tooling: [
 			"Linux",
@@ -139,34 +138,35 @@ const data = {
 			"API Gateway",
 			"Amplify",
 			"Elastic Beanstalk",
-			"CloudFront",
 			"CloudWatch",
-			"Chromatic",
+			"CloudFront",
+			"Playwright",
+			"Renovate",
+			"Kodiak",
 			"Changesets",
+			"Chromatic",
 		],
 		concepts: [
 			"SEO",
-			"Accessibility",
-			"Site Performance",
+			"A11y",
+			"I18n",
 			"ISR",
 			"SSR",
-			"Static Caching",
-			"Image Optimizations",
-			"Atomic Design Systems",
+			"Atomic Design",
+			"JWT",
+			"Authorization",
+			"Image Optimization",
+			"Lighthouse",
 			"Code-splitting",
-			"Lazy-loading",
-			"JWT Auth",
-			"API Permissions",
-			"API Design",
-			"API Caching",
-			"GraphQL APQ",
-			"Relay Connections",
+			"DB Seeding",
 			"DB Normalization",
+			"GraphQL APQ",
+			"CRDTs",
+			"Windowing",
 			"IP Blacklisting",
 			"Rate Limiting",
 			"Concurrency",
-			"DB Seeding",
-			"API Mocking",
+			"API Caching",
 			"Monorepos",
 		]
 	},
@@ -175,221 +175,230 @@ const data = {
 		college: "University of California, San Diego",
 		endDate: "06/01/2017"
 	},
-	experience: [
-		[
-			{
-				company: "Openbase",
-				jobTitle: "Staff Frontend Engineer",
-				startDate: "04/01/2021",
-				endDate: null,
-				highlights: [
-					oneLine`
-						Proposed then executed a gradual migration strategy to port the frontend
-						from a SPA-Parcel app to Next.js, Apollo, Styled-Components, Storybook and
-						Codegen.
-					`,
-					oneLine`
-						Improved all Lighthouse metrics from 20 to 90, and coverage from 0% to 70%.
-					`,
-					oneLine`
-						Architected and built dev.page with the Next.js, Apollo, Styled-Components,
-						Storybook, Codegen and Tailwind CSS.
-					`,
-					oneLine`
-						Created an Algolia-Apollo interoperability module to power Openbase's search,
-						then authored and published an article about it onto Algolia's engineering blog.
-					`,
-					oneLine`
-						Implemented the majority of the frontend application, including pages for
-						packages, categories, user-profiles, search and more.
-					`,
-					oneLine`
-						Participated in product feature ideation to drive user aquisition and
-						retention.
-					`,
-					oneLine`
-						Mentored developers in Next.js, Apollo Client, Styled-Components, and more.
-					`
-				]
-			},
-			{
-				company: "MakePurple",
-				jobTitle: "Side Project (owner)",
-				startDate: "09/01/2021",
-				endDate: null,
-				highlights: [
-					oneLine`
-						Built with Next.js, NextAuth, Prisma, Nexus, Apollo Server,
-						Styled-Components, Twin.Macro, TailwindCSS, Urql, Storybook, PlanetScale,
-						Upstash, Cloudinary, Postmark, Pusher, Octokit and Figma.
-					`,
-					oneLine`
-						Ported the yarn monolith to a monorepo with pnpm workspaces and Turborepo.
-					`,
-					oneLine`
-						Authored an internal CSS-in-JS library for emails in React, a rich text
-						editor with Slate, heat-maps with Visx, a type-safe GraphQL client for
-						Octokit, and more.
-					`,
-					oneLine`
-						Improved accessibility with support for screen-readers and keyboard
-						navigation with Radix and Headless UI.
-					`,
-					oneLine`
-						Implemented GraphQL resolvers for: activity feeds, GitHub follows,
-						Cloudinary image uploads, Pusher real-time chat, GitHub skill and user
-						search, connection suggestions, notifications, nested commenting, and CRUD
-						with Nexus + Prisma.
-					`
-				]
-			},
-			{
-				company: "Toastel",
-				jobTitle: "Senior Full Stack Engineer",
-				startDate: "01/01/2020",
-				endDate: "03/01/2021",
-				highlights: [
-					oneLine`
-						Designed in Figma, and created an atomic design system without using any
-						ui-toolkits, while improving accessibility and minimizing client bundle
-						size.
-					`,
-					oneLine`
-						Authored an internal charting library with Visx, a data-grid library with
-						React-Window, responsive emails with Mjml, animations with Framer-Motion,
-						and more.
-					`,
-					oneLine`
-						Created several GraphQL-Nexus plugins to rate-limit fields, validate inputs,
-						and prevent malicious queries with complexity and depth limits.
-					`,
-					oneLine`
-						Coded over 300 components and 400 stories on Storybook, with snapshot
-						tests.
-					`,
-					oneLine`
-						Achieved 95-100 on all Google Lighthouse metrics (excluding PWA).
-					`,
-					oneLine`
-						Implemented JWTs with refresh-tokens, blacklists and retries with Redis +
-						Apollo.
-					`,
-					oneLine`
-						Implemented GraphQL resolvers for: full-text search with Algolia, emails
-						with Nodemailer, subscriptions and payouts with Stripe, presigned URL
-						uploads with S3, localized timezones with Google Maps, and CRUD with Nexus
-						+ Prisma.
-					`
-				]
-			}
-		],
-		[
-			{
-				company: "Onfleet",
-				jobTitle: "Full Stack Engineer",
-				startDate: "01/01/2019",
-				endDate: "01/01/2020",
-				highlights: [
-					oneLine`
-						Migrated the AngularJS + ES5 frontend to React, Styled-Components and
-						TypeScript with snapshot testing through Jest + Storybook.
-					`,
-					oneLine`
-						Proposed then directed the migration of the CoffeeScript + Restify backend
-						monolith to TypeScript, Apollo Server and Serverless-Http that would allow
-						for incremental adoption for frontend and mobile teams.
-					`,
-					oneLine`
-						Rewrote both the Stripe billing and the Twilio voice and SMS proxying
-						services to support more features, be more declarative and be more
-						testable.
-					`
-				]
-			},
-			{
-				company: "Outward",
-				jobTitle: "Senior Software Engineer",
-				startDate: "01/01/2018",
-				endDate: "01/01/2019",
-				highlights: [
-					oneLine`
-						Implemented all client-side features for a 3D monogramming web-app that
-						supports more use-cases and produces higher-fidelity product images than
-						Adobe's Scene7 for Williams-Sonoma (built with React, TypeScript, JSS,
-							Apollo, GraphQL, Pixi, Babylon).
-					`,
-					oneLine`
-						Mentored Junior Frontend Engineers; worked with project managers in driving
-						requirements and timelines; interfaced directly with clients to assist
-						integration; and organized and led meetings with QA, graphics and the
-						dev-ops teams to coordinate successful releases and milestones.
-					`,
-					oneLine`
-						Created a RESTful service for Bassett Furniture's new consumer site,
-						including customer/designer interactions and authentication (built with
+	experience: {
+		professional: [
+			[
+				{
+					company: "Openbase",
+					jobTitle: "Staff Frontend Engineer",
+					startDate: "04/01/2021",
+					endDate: null,
+					highlights: [
+						oneLine`
+							Proposed then executed a gradual migration strategy to port the frontend
+							from a SPA-Parcel app to Next.js, Apollo, Styled-Components, Storybook and
+							Codegen.
+						`,
+						oneLine`
+							Improved all Lighthouse metrics from 20 to 90, and coverage from 0% to 70%.
+						`,
+						oneLine`
+							Architected and built dev.page with Next.js, Apollo, Styled-Components,
+							Storybook, Codegen and Tailwind CSS.
+						`,
+						oneLine`
+							Created an Algolia-Apollo interoperability module to power Openbase's search,
+							that populated @apollo/client's normalized cache.
+						`,
+						oneLine`
+							Implemented the majority of the frontend application, including pages for
+							packages, categories, user-profiles, search, comparisons and more.
+						`,
+						oneLine`
+							Participated in product feature ideation to drive user aquisition and
+							retention.
+						`,
+						oneLine`
+							Mentored developers in Next.js, Apollo Client, Styled-Components, and more.
+						`,
+						oneLine`
+							Authored a split-testing framework that integrated with Google Analytics and
+							Amplitude to a/b test by segmenting users by percentage or special conditions.
+						`,
+						oneLine`
+							Created serverless functions to reroute traffic from old sites and generate custom
+							README badges with metrics from Openbase for package maintainers.
+						`,
+					]
+				},
+				{
+					company: "Toastel",
+					jobTitle: "Senior Full Stack Engineer",
+					startDate: "01/01/2020",
+					endDate: "03/01/2021",
+					highlights: [
+						oneLine`
+							Designed in Figma, and created an atomic design system without using any
+							ui-toolkits, while improving accessibility and minimizing client bundle
+							size.
+						`,
+						oneLine`
+							Authored an internal charting library with Visx, a data-grid library with
+							React-Window, responsive emails with Mjml, animations with Framer-Motion,
+							and more.
+						`,
+						oneLine`
+							Created several GraphQL-Nexus plugins to rate-limit fields, validate inputs,
+							and prevent malicious queries with complexity and depth limits.
+						`,
+						oneLine`
+							Coded over 300 components and 400 stories on Storybook, with snapshot
+							tests.
+						`,
+						oneLine`
+							Achieved 95-100 on all Google Lighthouse metrics (excluding PWA).
+						`,
+						oneLine`
+							Implemented JWTs with refresh-tokens, blacklists and retries with Redis +
+							Apollo.
+						`,
+						oneLine`
+							Implemented GraphQL resolvers for: full-text search with Algolia, emails
+							with Nodemailer, subscriptions and payouts with Stripe, presigned URL
+							uploads with S3, localized timezones with Google Maps, and CRUD with Nexus
+							+ Prisma.
+						`
+					]
+				},
+				{
+					company: "Onfleet",
+					jobTitle: "Full Stack Engineer",
+					startDate: "01/01/2019",
+					endDate: "01/01/2020",
+					highlights: [
+						oneLine`
+							Migrated the AngularJS + ES5 frontend to React, Styled-Components and
+							TypeScript with snapshot testing through Jest + Storybook.
+						`,
+						oneLine`
+							Proposed then directed the migration of the CoffeeScript + Restify backend
+							monolith to TypeScript, Apollo Server and Serverless-Http that would allow
+							for incremental adoption for frontend and mobile teams.
+						`,
+						oneLine`
+							Rewrote both the Stripe billing and the Twilio voice and SMS proxying
+							services to support more features, be more declarative and be more
+							testable.
+						`
+					]
+				},
+			],
+			[
+				{
+					company: "Outward",
+					jobTitle: "Senior Software Engineer",
+					startDate: "01/01/2018",
+					endDate: "01/01/2019",
+					highlights: [
+						oneLine`
+							Implemented all client-side features for a 3D monogramming web-app that
+							supports more use-cases and produces higher-fidelity product images than
+							Adobe's Scene7 for Williams-Sonoma (built with React, TypeScript, JSS,
+								Apollo, GraphQL, Pixi, Babylon).
+						`,
+						oneLine`
+							Mentored Junior Frontend Engineers; worked with project managers in driving
+							requirements and timelines; interfaced directly with clients to assist
+							integration; and organized and led meetings with QA, graphics and the
+							dev-ops teams to coordinate successful releases and milestones.
+						`,
+						oneLine`
+							Created a RESTful service for Bassett Furniture's new consumer site,
+							including customer/designer interactions and authentication (built with
 							TypeScript + Koa).
-					`,
-					oneLine`
-						Architected Bassett Furniture's new consumer site with TypeScript, React,
-						Redux, Redux Observable and JSS.
-					`,
-					oneLine`
-						Authored an internal library to gradually migrate a legacy vanilla ES5 app
-						to React, while increasing test coverage from 0 to 60%.
-					`,
-					oneLine`
-						Built a sectional-sofa builder for Bassett Furniture's website for
-						customers to build their custom sofa and checkout to cart.
-					`,
-					oneLine`
-						Set-up a CI/CD pipeline with lint, build and test steps using TravisCI,
-						SonarQube, Jest and ESLint.
-					`
-				]
-			},
-			{
-				company: "Newport Asia",
-				jobTitle: "Contract Software Engineer",
-				startDate: "06/01/2016",
-				endDate: "12/01/2017",
-				highlights: [
-					oneLine`
-						Interfaced with non-technical financial analysts to gather requirements,
-						produce technical specifications and build financial tools.
-					`,
-					oneLine`
-						Built data-grids, dashboards and internal tools to normalize, aggregate
-						and visualize financial data using 3rd-party market data APIs.
-					`,
-					oneLine`
-						Put together a CI/CD pipeline with lint, build and test steps using
-						CircleCI, Mocha, Codecov and ESLint.
-					`
-				]
-			},
-			{
-				company: "Bosera Asset Management",
-				jobTitle: "Intern Software Engineer",
-				startDate: "06/01/2015",
-				endDate: "06/01/2016",
-				highlights: [
-					oneLine`
-						Created forms for clients to send questions and support requests, and for
-						employees to receive, filter and answer them from an internal portal.
-					`,
-					oneLine`
-						Converted wireframes and mocks into several built pages, forms and charts
-						for the company's revamped website.
-					`
-				]
-			}
+						`,
+						oneLine`
+							Architected new client site with TypeScript, React, Redux Observable and
+							JSS.
+						`,
+						oneLine`
+							Authored an internal library to gradually migrate a legacy vanilla ES5 app
+							to React, while increasing test coverage from 0 to 60%.
+						`,
+						oneLine`
+							Set-up a CI/CD pipeline using TravisCI, SonarQube, Jest and ESLint.
+						`
+					]
+				},
+				{
+					company: "Newport Asia",
+					jobTitle: "Contract Software Engineer",
+					startDate: "06/01/2016",
+					endDate: "12/01/2017",
+					highlights: []
+				},
+				{
+					company: "Bosera Funds",
+					jobTitle: "Intern Software Engineer",
+					startDate: "06/01/2015",
+					endDate: "06/01/2016",
+					highlights: []
+				}
+			]
+		],
+		projects: [
+			[
+				{
+					company: "@pluv/io",
+					jobTitle: "Open Source (npm)",
+					startDate: "08/01/2022",
+					endDate: null,
+					highlights: [
+						oneLine`
+							Created E2E type-safe real-time packages for Node.js and Cloudflare
+							Workers.
+						`,
+						oneLine`
+							Built with support for automatic type safety, authentication, custom
+							events, rooms, awareness + presence and CRDT storage (with yjs).
+						`,
+						oneLine`
+							Configured git and npm management with Commitizen, Changeset, Renovate,
+							Kodiak and GitHub Actions.
+						`,
+						oneLine`
+							Added E2E tests with Playwright, simulating distributed Node.js
+							servers, singular Node.js servers and on Cloudflare Worker durable objects.
+						`,
+					]
+				},
+				{
+					company: "makepurple.com",
+					jobTitle: "Website",
+					startDate: "09/01/2021",
+					endDate: null,
+					highlights: [
+						oneLine`
+							Built with Next.js, NextAuth, Prisma, Nexus, Apollo Server,
+							Styled-Components, Twin.Macro, TailwindCSS, Urql, Storybook, PlanetScale,
+							Upstash, Cloudinary, Postmark, Pusher, Octokit, Figma, Pnpm workspaces and
+							Turborepo.
+						`,
+						oneLine`
+							Authored an internal CSS-in-JS library for emails in React, a rich text
+							editor with Slate, heat-maps with Visx, a type-safe GraphQL client for
+							Octokit, and more.
+						`,
+						oneLine`
+							Improved accessibility with support for screen-readers and keyboard
+							navigation with Radix and Headless UI.
+						`,
+						oneLine`
+							Implemented GraphQL resolvers for: activity feeds, GitHub follows,
+							Cloudinary image uploads, Pusher real-time chat, GitHub skill and user
+							search, connection suggestions, notifications, nested commenting, and CRUD
+							with Nexus + Prisma.
+						`
+					]
+				},
+			]
 		]
-	]
+	}
 };
 
 export const Page: NextPage = () => {
 	const pagesRef = useRef<MutableRefObject<HTMLDivElement | null>[]>(
-		data.experience.map(() => ({ current: null }))
+		data.experience.professional.map(() => ({ current: null }))
 	);
 
 	return (
@@ -475,7 +484,7 @@ export const Page: NextPage = () => {
 							Professional Experience
 						</h3>
 						<Timeline className="mt-4">
-							{data.experience[0].map((experience, i) => (
+							{data.experience.professional[0].map((experience, i) => (
 								<TimelineItem
 									key={i}
 									endDate={experience.endDate ?? undefined}
@@ -555,16 +564,15 @@ export const Page: NextPage = () => {
 					{!!data.link && <ResumeLink link={data.link} />}
 				</SideBar>
 			</LetterPage>
-			{data.experience.slice(1).map((experiences, i) => (
-				<LetterPage
-					key={i}
-					ref={pagesRef.current[i + 1]}
-					className={clsx(
-						"flex flex-row-reverse items-stretch",
-						"shadow-2xl dark:shadow-indigo-700/40"
-					)}
-				>
-					<div className="flex-grow flex flex-col items-stretch gap-4 p-4">
+			<LetterPage
+				ref={pagesRef.current[1]}
+				className={clsx(
+					"flex flex-row-reverse items-stretch",
+					"shadow-2xl dark:shadow-indigo-700/40"
+				)}
+			>
+				<div className="flex-grow flex flex-col items-stretch gap-4 py-4">
+					<div className="flex flex-col items-stretch gap-4 px-4">
 						<h3
 							className={clsx(
 								"text-xl leading-none font-semibold pb-1 mx-auto",
@@ -583,7 +591,7 @@ export const Page: NextPage = () => {
 							</span>
 						</h3>
 						<Timeline>
-							{experiences.map((experience, j) => (
+							{data.experience.professional[1].map((experience, j) => (
 								<TimelineItem
 									key={j}
 									endDate={experience.endDate ?? undefined}
@@ -592,36 +600,71 @@ export const Page: NextPage = () => {
 									title={experience.company}
 									subTitle={experience.jobTitle}
 								>
-									<BulletedList>
-										{experience.highlights.map((highlight, j) => (
-											<BulletedListItem key={j}>
-												{highlight}
-											</BulletedListItem>
-										))}
-									</BulletedList>
+									{!!experience.highlights.length && (
+										<BulletedList>
+											{experience.highlights.map((highlight, j) => (
+												<BulletedListItem key={j}>
+													{highlight}
+												</BulletedListItem>
+											))}
+										</BulletedList>
+									)}
 								</TimelineItem>
 							))}
 						</Timeline>
 					</div>
-					<SideBar
-						className={clsx(
-							"flex-shrink-0 flex flex-col gap-4",
-							"w-1/3 p-4"
-						)}
-					>
-						<div>
-							<SideBarHeader>Education</SideBarHeader>
-							<SideBarSubHeader>{data.education.degree}</SideBarSubHeader>
-							<div className="text-xs mt-2">{data.education.college}</div>
-							<div className="flex items-center gap-2 mt-1 text-xs">
-								<FaCalendarAlt />
-								<span>Graduated: {dayjs(data.education.endDate).format("MMMM YYYY")}</span>
-							</div>
+					<div className="flex-grow flex flex-col items-stretch gap-4 px-4">
+						<h3
+							className={clsx(
+								"text-xl leading-none font-semibold pb-1 mx-auto",
+								"border-b-2 border-solid border-gray-500/60 dark:border-indigo-500",
+								"uppercase"
+							)}
+						>
+							<span>Projects & Open Source</span>
+						</h3>
+						<Timeline>
+							{data.experience.projects[0].map((experience, j) => (
+								<TimelineItem
+									key={j}
+									endDate={experience.endDate ?? undefined}
+									icon={<FaCalendarAlt className="h-3 w-3" height={12} width={12} />}
+									startDate={experience.startDate}
+									title={experience.company}
+									subTitle={experience.jobTitle}
+								>
+									{!!experience.highlights.length && (
+										<BulletedList>
+											{experience.highlights.map((highlight, j) => (
+												<BulletedListItem key={j}>
+													{highlight}
+												</BulletedListItem>
+											))}
+										</BulletedList>
+									)}
+								</TimelineItem>
+							))}
+						</Timeline>
+					</div>
+				</div>
+				<SideBar
+					className={clsx(
+						"flex-shrink-0 flex flex-col gap-4",
+						"w-1/3 p-4"
+					)}
+				>
+					<div>
+						<SideBarHeader>Education</SideBarHeader>
+						<SideBarSubHeader>{data.education.degree}</SideBarSubHeader>
+						<div className="text-xs mt-2">{data.education.college}</div>
+						<div className="flex items-center gap-2 mt-1 text-xs">
+							<FaCalendarAlt />
+							<span>Graduated: {dayjs(data.education.endDate).format("MMMM YYYY")}</span>
 						</div>
-						{!!data.link && <ResumeLink link={data.link} />}
-					</SideBar>
-				</LetterPage>
-			))}
+					</div>
+					{!!data.link && <ResumeLink link={data.link} />}
+				</SideBar>
+			</LetterPage>
 		</PageContainer>
 	);
 };
