@@ -29,6 +29,7 @@ export const Avatar: FC<AvatarProps> = ({ className, style }) => {
 				)}
 			>
 				<NextImage
+					alt="leedavidcs"
 					src="https://avatars.githubusercontent.com/u/15151154?v=4"
 					loader={({ src, width }) => {
 						const url: URL = new URL(src);
