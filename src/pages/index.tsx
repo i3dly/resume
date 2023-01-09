@@ -357,8 +357,8 @@ const data = {
 							Kodiak and GitHub Actions.
 						`,
 						oneLine`
-							Added E2E tests with Playwright, simulating distributed Node.js
-							servers, singular Node.js servers and on Cloudflare Worker durable objects.
+							Added E2E tests with Playwright, simulating runs on distributed Node.js
+							servers, singular Node.js servers and Cloudflare Worker durable objects.
 						`,
 					]
 				},
