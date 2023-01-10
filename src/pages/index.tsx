@@ -222,6 +222,61 @@ const data = {
 					]
 				},
 				{
+					company: "@pluv/io",
+					jobTitle: "Open Source (npm)",
+					startDate: "08/01/2022",
+					endDate: null,
+					highlights: [
+						oneLine`
+							Created E2E type-safe real-time packages for Node.js and Cloudflare
+							Workers.
+						`,
+						oneLine`
+							Built with support for automatic type safety, authentication, custom
+							events, rooms, awareness + presence and CRDT storage (with yjs).
+						`,
+						oneLine`
+							Configured git and npm management with Commitizen, Changeset, Renovate,
+							Kodiak and GitHub Actions.
+						`,
+						oneLine`
+							Added E2E tests with Playwright, simulating runs on distributed Node.js
+							servers, singular Node.js servers and Cloudflare Worker durable objects.
+						`,
+					]
+				},
+				{
+					company: "makepurple.com",
+					jobTitle: "Website",
+					startDate: "09/01/2021",
+					endDate: null,
+					highlights: [
+						oneLine`
+							Built with Next.js, NextAuth, Prisma, Nexus, Apollo Server,
+							Styled-Components, Twin.Macro, TailwindCSS, Urql, Storybook, PlanetScale,
+							Upstash, Cloudinary, Postmark, Pusher, Octokit, Figma, Pnpm workspaces and
+							Turborepo.
+						`,
+						oneLine`
+							Authored an internal CSS-in-JS library for emails in React, a rich text
+							editor with Slate, heat-maps with Visx, a type-safe GraphQL client for
+							Octokit, and more.
+						`,
+						oneLine`
+							Improved accessibility with support for screen-readers and keyboard
+							navigation with Radix and Headless UI.
+						`,
+						oneLine`
+							Implemented GraphQL resolvers for: activity feeds, GitHub follows,
+							Cloudinary image uploads, Pusher real-time chat, GitHub skill and user
+							search, connection suggestions, notifications, nested commenting, and CRUD
+							with Nexus + Prisma.
+						`
+					]
+				},
+			],
+			[
+				{
 					company: "Toastel",
 					jobTitle: "Senior Full Stack Engineer",
 					startDate: "01/01/2020",
@@ -282,8 +337,6 @@ const data = {
 						`
 					]
 				},
-			],
-			[
 				{
 					company: "Outward",
 					jobTitle: "Senior Software Engineer",
@@ -334,63 +387,6 @@ const data = {
 					endDate: "06/01/2016",
 					highlights: []
 				}
-			]
-		],
-		projects: [
-			[
-				{
-					company: "@pluv/io",
-					jobTitle: "Open Source (npm)",
-					startDate: "08/01/2022",
-					endDate: null,
-					highlights: [
-						oneLine`
-							Created E2E type-safe real-time packages for Node.js and Cloudflare
-							Workers.
-						`,
-						oneLine`
-							Built with support for automatic type safety, authentication, custom
-							events, rooms, awareness + presence and CRDT storage (with yjs).
-						`,
-						oneLine`
-							Configured git and npm management with Commitizen, Changeset, Renovate,
-							Kodiak and GitHub Actions.
-						`,
-						oneLine`
-							Added E2E tests with Playwright, simulating runs on distributed Node.js
-							servers, singular Node.js servers and Cloudflare Worker durable objects.
-						`,
-					]
-				},
-				{
-					company: "makepurple.com",
-					jobTitle: "Website",
-					startDate: "09/01/2021",
-					endDate: null,
-					highlights: [
-						oneLine`
-							Built with Next.js, NextAuth, Prisma, Nexus, Apollo Server,
-							Styled-Components, Twin.Macro, TailwindCSS, Urql, Storybook, PlanetScale,
-							Upstash, Cloudinary, Postmark, Pusher, Octokit, Figma, Pnpm workspaces and
-							Turborepo.
-						`,
-						oneLine`
-							Authored an internal CSS-in-JS library for emails in React, a rich text
-							editor with Slate, heat-maps with Visx, a type-safe GraphQL client for
-							Octokit, and more.
-						`,
-						oneLine`
-							Improved accessibility with support for screen-readers and keyboard
-							navigation with Radix and Headless UI.
-						`,
-						oneLine`
-							Implemented GraphQL resolvers for: activity feeds, GitHub follows,
-							Cloudinary image uploads, Pusher real-time chat, GitHub skill and user
-							search, connection suggestions, notifications, nested commenting, and CRUD
-							with Nexus + Prisma.
-						`
-					]
-				},
 			]
 		]
 	}
@@ -564,107 +560,77 @@ export const Page: NextPage = () => {
 					{!!data.link && <ResumeLink link={data.link} />}
 				</SideBar>
 			</LetterPage>
-			<LetterPage
-				ref={pagesRef.current[1]}
-				className={clsx(
-					"flex flex-row-reverse items-stretch",
-					"shadow-2xl dark:shadow-indigo-700/40"
-				)}
-			>
-				<div className="flex-grow flex flex-col items-stretch gap-4 py-4">
-					<div className="flex flex-col items-stretch gap-4 px-4">
-						<h3
-							className={clsx(
-								"text-xl leading-none font-semibold pb-1 mx-auto",
-								"border-b-2 border-solid border-gray-500/60 dark:border-indigo-500",
-								"uppercase"
-							)}
-						>
-							<span>Professional Experience</span>{" "}
-							<span
-								className={clsx(
-									"text-sm",
-									"text-gray-600 dark:text-gray-300/80"
-								)}
-							>
-								(continued)
-							</span>
-						</h3>
-						<Timeline>
-							{data.experience.professional[1].map((experience, j) => (
-								<TimelineItem
-									key={j}
-									endDate={experience.endDate ?? undefined}
-									icon={<FaCalendarAlt className="h-3 w-3" height={12} width={12} />}
-									startDate={experience.startDate}
-									title={experience.company}
-									subTitle={experience.jobTitle}
-								>
-									{!!experience.highlights.length && (
-										<BulletedList>
-											{experience.highlights.map((highlight, j) => (
-												<BulletedListItem key={j}>
-													{highlight}
-												</BulletedListItem>
-											))}
-										</BulletedList>
-									)}
-								</TimelineItem>
-							))}
-						</Timeline>
-					</div>
-					<div className="flex-grow flex flex-col items-stretch gap-4 px-4">
-						<h3
-							className={clsx(
-								"text-xl leading-none font-semibold pb-1 mx-auto",
-								"border-b-2 border-solid border-gray-500/60 dark:border-indigo-500",
-								"uppercase"
-							)}
-						>
-							<span>Projects & Open Source</span>
-						</h3>
-						<Timeline>
-							{data.experience.projects[0].map((experience, j) => (
-								<TimelineItem
-									key={j}
-									endDate={experience.endDate ?? undefined}
-									icon={<FaCalendarAlt className="h-3 w-3" height={12} width={12} />}
-									startDate={experience.startDate}
-									title={experience.company}
-									subTitle={experience.jobTitle}
-								>
-									{!!experience.highlights.length && (
-										<BulletedList>
-											{experience.highlights.map((highlight, j) => (
-												<BulletedListItem key={j}>
-													{highlight}
-												</BulletedListItem>
-											))}
-										</BulletedList>
-									)}
-								</TimelineItem>
-							))}
-						</Timeline>
-					</div>
-				</div>
-				<SideBar
+			{data.experience.professional.slice(1).map((experiences, i) => (
+				<LetterPage
+					key={i}
+					ref={pagesRef.current[i]}
 					className={clsx(
-						"flex-shrink-0 flex flex-col gap-4",
-						"w-1/3 p-4"
+						"flex flex-row-reverse items-stretch",
+						"shadow-2xl dark:shadow-indigo-700/40"
 					)}
 				>
-					<div>
-						<SideBarHeader>Education</SideBarHeader>
-						<SideBarSubHeader>{data.education.degree}</SideBarSubHeader>
-						<div className="text-xs mt-2">{data.education.college}</div>
-						<div className="flex items-center gap-2 mt-1 text-xs">
-							<FaCalendarAlt />
-							<span>Graduated: {dayjs(data.education.endDate).format("MMMM YYYY")}</span>
+					<div className="flex-grow flex flex-col items-stretch gap-4 py-4">
+						<div className="flex flex-col items-stretch gap-4 px-4">
+							<h3
+								className={clsx(
+									"text-xl leading-none font-semibold pb-1 mx-auto",
+									"border-b-2 border-solid border-gray-500/60 dark:border-indigo-500",
+									"uppercase"
+								)}
+							>
+								<span>Professional Experience</span>{" "}
+								<span
+									className={clsx(
+										"text-sm",
+										"text-gray-600 dark:text-gray-300/80"
+									)}
+								>
+									(continued)
+								</span>
+							</h3>
+							<Timeline>
+								{experiences.map((experience, j) => (
+									<TimelineItem
+										key={j}
+										endDate={experience.endDate ?? undefined}
+										icon={<FaCalendarAlt className="h-3 w-3" height={12} width={12} />}
+										startDate={experience.startDate}
+										title={experience.company}
+										subTitle={experience.jobTitle}
+									>
+										{!!experience.highlights.length && (
+											<BulletedList>
+												{experience.highlights.map((highlight, j) => (
+													<BulletedListItem key={j}>
+														{highlight}
+													</BulletedListItem>
+												))}
+											</BulletedList>
+										)}
+									</TimelineItem>
+								))}
+							</Timeline>
 						</div>
 					</div>
-					{!!data.link && <ResumeLink link={data.link} />}
-				</SideBar>
-			</LetterPage>
+					<SideBar
+						className={clsx(
+							"flex-shrink-0 flex flex-col gap-4",
+							"w-1/3 p-4"
+						)}
+					>
+						<div>
+							<SideBarHeader>Education</SideBarHeader>
+							<SideBarSubHeader>{data.education.degree}</SideBarSubHeader>
+							<div className="text-xs mt-2">{data.education.college}</div>
+							<div className="flex items-center gap-2 mt-1 text-xs">
+								<FaCalendarAlt />
+								<span>Graduated: {dayjs(data.education.endDate).format("MMMM YYYY")}</span>
+							</div>
+						</div>
+						{!!data.link && <ResumeLink link={data.link} />}
+					</SideBar>
+				</LetterPage>
+			))}
 		</PageContainer>
 	);
 };

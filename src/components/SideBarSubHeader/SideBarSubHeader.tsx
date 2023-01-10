@@ -16,7 +16,6 @@ export const SideBarSubHeader: FC<SideBarSubHeaderProps> = ({
 		<h4
 			className={clsx(
 				"text-sm leading-none font-medium underline",
-				"text-cyan-300 dark:text-cyan-200",
 				className
 			)}
 			style={style}
