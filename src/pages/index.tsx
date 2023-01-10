@@ -563,7 +563,7 @@ export const Page: NextPage = () => {
 			{data.experience.professional.slice(1).map((experiences, i) => (
 				<LetterPage
 					key={i}
-					ref={pagesRef.current[i]}
+					ref={pagesRef.current[i + 1]}
 					className={clsx(
 						"flex flex-row-reverse items-stretch",
 						"shadow-2xl dark:shadow-indigo-700/40"
