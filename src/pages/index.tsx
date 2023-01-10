@@ -205,8 +205,8 @@ const data = {
 							packages, categories, user-profiles, search, comparisons and more.
 						`,
 						oneLine`
-							Participated in product feature ideation to drive user aquisition and
-							retention.
+							Pitched and executed on experiments in product feature ideation to drive
+							user aquisition and retention.
 						`,
 						oneLine`
 							Mentored developers in Next.js, Apollo Client, Styled-Components, and more.
@@ -240,14 +240,14 @@ const data = {
 							Kodiak and GitHub Actions.
 						`,
 						oneLine`
-							Added E2E tests with Playwright, simulating runs on distributed Node.js
-							servers, singular Node.js servers and Cloudflare Worker durable objects.
+							Added E2E tests with Playwright, simulating runs on singular and
+							distributed Node.js, and Cloudflare Worker durable objects.
 						`,
 					]
 				},
 				{
-					company: "makepurple.com",
-					jobTitle: "Website",
+					company: "MakePurple",
+					jobTitle: "Project Owner",
 					startDate: "09/01/2021",
 					endDate: null,
 					highlights: [
