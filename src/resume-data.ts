@@ -1,6 +1,43 @@
 import { oneLine, stripIndents } from "common-tags";
 
-export const data = {
+export type ProfessionalExperience = {
+    company: string;
+    jobTitle: string;
+    startDate: string;
+    endDate: string | null;
+    highlights: readonly string[];
+}
+
+export type ResumeData = {
+    link: string;
+    name: string;
+    jobTitle: string;
+    sites: {
+        email: string;
+        linkedin: string;
+        github: string;
+        blog: string;
+    };
+    summary: string;
+    skills: {
+        languages: readonly string[],
+        frameworks: readonly string[],
+        frontend: readonly string[],
+        backend: readonly string[],
+        tooling: readonly string[],
+        concepts: readonly string[]
+    };
+    education: {
+		degree: string;
+		college: string;
+		endDate: string;
+	};
+    experience: {
+        professional: readonly (ProfessionalExperience[])[]
+    };
+}
+
+export const data: ResumeData = {
 	link: "https://resume.leedavidcs.dev",
 	name: "David Lee",
 	jobTitle: "Staff Software Engineer",

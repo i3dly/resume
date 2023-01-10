@@ -4,6 +4,7 @@ import {
 	BulletedListItem,
 	DarkModeSwitch,
 	DownloadButton,
+	DownloadDocxButton,
 	LetterPage,
 	PageContainer,
 	ResumeLink,
@@ -36,11 +37,14 @@ export const Page: NextPage = () => {
 	return (
 		<PageContainer className="gap-8">
 			<div className="flex justify-between w-[8.5in]">
-				<DownloadButton
-					fileName="lee_david_resume.pdf"
-					metaData={JSON.stringify(data)}
-					targets={pagesRef.current}
-				/>
+				<div className="flex flex-row gap-3">
+					<DownloadButton
+						fileName="lee_david_resume.pdf"
+						metaData={JSON.stringify(data)}
+						targets={pagesRef.current}
+					/>
+					<DownloadDocxButton />
+				</div>
 				<DarkModeSwitch />
 			</div>
 			<LetterPage

@@ -4,6 +4,7 @@ export * from "./BulletedList";
 export * from "./BulletedListItem";
 export * from "./DarkModeSwitch";
 export * from "./DownloadButton";
+export * from "./DownloadDocxButton";
 export * from "./LetterPage";
 export * from "./PageContainer";
 export * from "./ResumeLink";
