@@ -199,7 +199,7 @@ export const data: ResumeData = {
 							Codegen.
 						`,
 						oneLine`
-							Improved all Lighthouse metrics from 20 to 90, and coverage from 0% to 70%.
+							Improved performance, a11y and SEO to boost Lighthouse scores from 20 to 90.
 						`,
 						oneLine`
 							Architected and built dev.page with Next.js, Apollo, Styled-Components,
@@ -210,7 +210,7 @@ export const data: ResumeData = {
 							that populated @apollo/client's normalized cache.
 						`,
 						oneLine`
-							Implemented the majority of the frontend application, including pages for
+							Contributed significantly to the frontend application, including pages for
 							packages, categories, user-profiles, search, comparisons and more.
 						`,
 						oneLine`
@@ -218,7 +218,8 @@ export const data: ResumeData = {
 							user aquisition and retention.
 						`,
 						oneLine`
-							Mentored developers in Next.js, Apollo Client, Styled-Components, and more.
+							Mentored in topics of Next.js, Apollo normalized cache, GraphQL schema design,
+							and more.
 						`,
 						oneLine`
 							Authored a split-testing framework that integrated with Google Analytics and
