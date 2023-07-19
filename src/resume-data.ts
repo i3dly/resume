@@ -202,24 +202,19 @@ export const data: ResumeData = {
 							Improved performance, a11y and SEO to boost Lighthouse scores from 20 to 90.
 						`,
 						oneLine`
-							Architected and built dev.page with Next.js, Apollo, Styled-Components,
-							Storybook, Codegen and Tailwind CSS.
+							Architected the frontend application and implemented many features with
+							Next.js, Apollo, Styled-Components, Storybook, Codegen and Tailwind CSS.
 						`,
 						oneLine`
 							Created an Algolia-Apollo interoperability module to power Openbase's search,
 							that populated @apollo/client's normalized cache.
 						`,
 						oneLine`
-							Contributed significantly to the frontend application, including pages for
-							packages, categories, user-profiles, search, comparisons and more.
-						`,
-						oneLine`
 							Pitched and executed on experiments in product feature ideation to drive
 							user aquisition and retention.
 						`,
 						oneLine`
-							Mentored in topics of Next.js, Apollo normalized cache, GraphQL schema design,
-							and more.
+							Mentored such topics including Next.js, GraphQL + Apollo, Storybook, and more.
 						`,
 						oneLine`
 							Authored a split-testing framework that integrated with Google Analytics and
@@ -238,7 +233,7 @@ export const data: ResumeData = {
 					endDate: null,
 					highlights: [
 						oneLine`
-							Created E2E type-safe real-time packages for Node.js and Cloudflare
+							Created E2E type-safe, real-time packages for Node.js and Cloudflare
 							Workers.
 						`,
 						oneLine`
@@ -251,7 +246,11 @@ export const data: ResumeData = {
 						`,
 						oneLine`
 							Added E2E tests with Playwright, simulating runs on singular and
-							distributed Node.js, and Cloudflare Worker durable objects.
+							distributed Node.js servers, and Cloudflare Worker durable objects.
+						`,
+						oneLine`
+							Implemented Vercel-style multi-project deployments for websocket
+							servers as a GitHub app, using CDKTF/Terraform, AWS (S3, SQS, ECR, Lambda) and wrangler.
 						`,
 					]
 				},
