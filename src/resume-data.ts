@@ -4,6 +4,7 @@ export type ProfessionalExperience = {
     company: string;
     jobTitle: string;
     startDate: string;
+	info?: string;
     endDate: string | null;
     highlights: readonly string[];
 }
@@ -111,47 +112,35 @@ export const data: ResumeData = {
 			"SourceTree",
 			"Webpack",
 			"pnpm workspaces",
-			"Turborepo",
-			"Lerna",
-			"Docker",
-			"Cypress",
-			"Jest",
-			"ESLint",
-			"Prettier",
 			"GraphQL-Codegen",
-			"Jira",
+			"Terraform",
+			"CDKTF",
+			"Turborepo",
+			"Docker",
+			"GitHub Actions",
+			"AWS",
+			"Vercel",
+			"Netlify",
+			"Cloudflare",
+			"Upstash",
+			"NeonDB",
 			"Confluence",
-			"Notion",
 			"Amplitude",
+			"Notion",
+			"Jira",
+			"Google Analytics",
 			"Segment",
 			"Sentry",
-			"Google Analytics",
-			"GitHub Actions",
-			"PlanetScale",
-			"Upstash",
 			"Postmark",
 			"Octokit",
 			"Algolia",
-			"Pusher",
 			"Stripe",
 			"Twilio",
-			"GraphCDN",
+			"Stellate",
 			"Cloudinary",
-			"Cloudflare",
-			"Vercel",
-			"Netlify",
-			"S3",
-			"RDS",
-			"ElastiCache",
-			"Lambda",
-			"API Gateway",
-			"Amplify",
-			"Elastic Beanstalk",
-			"CloudWatch",
-			"CloudFront",
 			"Playwright",
-			"Renovate",
-			"Kodiak",
+			"Cypress",
+			"Jest",
 			"Changesets",
 			"Chromatic",
 		],
@@ -189,6 +178,7 @@ export const data: ResumeData = {
 			[
 				{
 					company: "Openbase",
+					info: "shut-down",
 					jobTitle: "Staff Frontend Engineer",
 					startDate: "04/01/2021",
 					endDate: null,
@@ -287,6 +277,7 @@ export const data: ResumeData = {
 			[
 				{
 					company: "Toastel",
+					info: "shut-down",
 					jobTitle: "Senior Full Stack Engineer",
 					startDate: "01/01/2020",
 					endDate: "03/01/2021",
@@ -348,6 +339,7 @@ export const data: ResumeData = {
 				},
 				{
 					company: "Outward",
+					info: "acquired",
 					jobTitle: "Senior Software Engineer",
 					startDate: "01/01/2018",
 					endDate: "01/01/2019",
@@ -356,7 +348,7 @@ export const data: ResumeData = {
 							Implemented all client-side features for a 3D monogramming web-app that
 							supports more use-cases and produces higher-fidelity product images than
 							Adobe's Scene7 for Williams-Sonoma (built with React, TypeScript, JSS,
-								Apollo, GraphQL, Pixi, Babylon).
+							Apollo, GraphQL, Pixi, Babylon).
 						`,
 						oneLine`
 							Mentored Junior Frontend Engineers; worked with project managers in driving

@@ -7,6 +7,7 @@ export interface TimelineItemProps {
 	className?: string;
 	endDate?: Date | string
 	icon: ReactElement;
+	info?: string;
 	startDate: Date | string
 	style?: CSSProperties;
 	subTitle?: string;
@@ -18,6 +19,7 @@ export const TimelineItem: FC<TimelineItemProps> = ({
 	className,
 	endDate,
 	icon,
+	info,
 	startDate,
 	style,
 	subTitle,
@@ -50,11 +52,16 @@ export const TimelineItem: FC<TimelineItemProps> = ({
 			<div className="flex flex-col">
 				<h4
 					className={clsx(
-						"flex items-center h-6",
+						"flex items-center gap-1.5 h-6",
 						"text-base font-medium leading-none"
 					)}
 				>
-					{title}
+					<span>{title}</span>
+					{!!info && (
+						<>
+							<span className="text-xs font-normal">({info})</span>
+						</>
+					)}
 				</h4>
 				{!!subTitle && (
 					<h5

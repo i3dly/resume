@@ -125,6 +125,7 @@ export const Page: NextPage = () => {
 									key={i}
 									endDate={experience.endDate ?? undefined}
 									icon={<FaCalendarAlt className="h-3 w-3" height={12} width={12} />}
+									info={experience.info}
 									startDate={experience.startDate}
 									title={experience.company}
 									subTitle={experience.jobTitle}
@@ -234,6 +235,7 @@ export const Page: NextPage = () => {
 										key={j}
 										endDate={experience.endDate ?? undefined}
 										icon={<FaCalendarAlt className="h-3 w-3" height={12} width={12} />}
+										info={experience.info}
 										startDate={experience.startDate}
 										title={experience.company}
 										subTitle={experience.jobTitle}
