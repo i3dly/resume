@@ -2,7 +2,7 @@ const path = require("path");
 
 /** @type {import("eslint").Linter.Config} */
 module.exports = {
-	extends: ["next", "turbo", "plugin:prettier/recommended", "plugin:tailwindcss/recommended", "prettier"],
+	extends: ["next", "plugin:prettier/recommended", "plugin:tailwindcss/recommended", "prettier"],
 	parserOptions: {
 		babelOptions: {
 			presets: [require.resolve("next/babel")]
