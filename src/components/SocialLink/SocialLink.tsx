@@ -13,14 +13,14 @@ export interface SocialLinkProps {
 export const SocialLink: FC<SocialLinkProps> = ({ children, className, href, icon, style }) => {
 	return (
 		<Anchor
-			className={cn("inline-flex items-center gap-1.5", className)}
+			className={cn("inline-flex items-center", className)}
 			href={href}
 			rel="noreferrer noopener"
 			style={style}
 			target="_blank"
 		>
 			{icon}
-			<span>{children}</span>
+			<span className="ml-1.5">{children}</span>
 		</Anchor>
 	);
 };

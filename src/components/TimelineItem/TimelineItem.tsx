@@ -34,7 +34,6 @@ export const TimelineItem: FC<TimelineItemProps> = ({
 					relative
 					flex
 					items-start
-					gap-3
 					before:absolute
 					before:-bottom-[1rem]
 					before:left-[0.75rem]
@@ -73,12 +72,12 @@ export const TimelineItem: FC<TimelineItemProps> = ({
 			>
 				{icon}
 			</div>
-			<div className="flex flex-col">
-				<h4 className={cn("flex h-6 items-center gap-1.5", "text-base font-medium leading-none")}>
+			<div className="ml-3 flex flex-col">
+				<h4 className={cn("flex h-6 items-center text-base font-medium leading-none")}>
 					<span>{title}</span>
 					{!!info && (
 						<>
-							<span className="text-xs font-normal">({info})</span>
+							<span className="ml-1.5 text-xs font-normal">({info})</span>
 						</>
 					)}
 				</h4>

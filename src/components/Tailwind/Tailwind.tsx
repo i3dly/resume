@@ -6,20 +6,5 @@ export interface TailwindProps {
 }
 
 export const Tailwind: FC<TailwindProps> = ({ children }) => {
-	return (
-		<OneDocTailwind
-			config={{
-				darkMode: "class",
-				theme: {
-					extend: {
-						backgroundImage: {
-							"makepurple-gradient": `linear-gradient(-80deg, #db2777, $#7c3aed, #3b82f6)`
-						}
-					}
-				}
-			}}
-		>
-			{children}
-		</OneDocTailwind>
-	);
+	return <OneDocTailwind>{children}</OneDocTailwind>;
 };

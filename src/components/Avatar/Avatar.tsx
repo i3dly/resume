@@ -1,7 +1,4 @@
-"use client";
-
 import { oneLine } from "common-tags";
-import NextImage from "next/image";
 import type { CSSProperties, FC } from "react";
 import { cn } from "../../utils/cn";
 
@@ -39,20 +36,12 @@ export const Avatar: FC<AvatarProps> = ({ className, style }) => {
 			target="_blank"
 		>
 			<div className={cn("z-10 flex items-stretch overflow-hidden rounded-full")}>
-				<NextImage
+				{/* eslint-disable-next-line @next/next/no-img-element */}
+				<img
 					alt="leedavidcs"
-					src="https://avatars.githubusercontent.com/u/15151154?v=4"
-					loader={({ src, width }) => {
-						const url: URL = new URL(src);
-
-						url.searchParams.append("s", `${width}`);
-
-						return url.toString();
-					}}
-					priority
+					src="https://avatars.githubusercontent.com/u/15151154?v=4&s=${96"
 					width={96}
 					height={96}
-					unoptimized
 				/>
 			</div>
 		</a>

@@ -1,3 +1,4 @@
+/* eslint-disable tailwindcss/enforces-shorthand */
 import { oneLine } from "common-tags";
 import type { FC } from "react";
 import { FaCalendarAlt, FaCode, FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
@@ -32,37 +33,37 @@ export const ResumePage1: FC = () => {
 			<div className="flex grow flex-col items-stretch">
 				<div
 					className={cn(
-						"flex w-full items-center gap-4 p-4",
+						"flex w-full items-center p-4",
 						"border-b border-solid border-gray-500/60 dark:border-indigo-500"
 					)}
 				>
 					<div className={"shrink-0"}>
 						<Avatar />
 					</div>
-					<div className="min-w-0 grow basis-0">
+					<div className="ml-4 min-w-0 grow basis-0">
 						<h1 className="text-3xl font-semibold leading-none">{data.name}</h1>
 						<h2 className="text-gray-600 dark:text-gray-300/80">{data.jobTitle}</h2>
-						<div className={cn("grid grid-cols-2 gap-x-4 gap-y-1", "mt-2", "text-xs")}>
+						<div className={cn("mt-2 grid grid-cols-2 gap-x-4 gap-y-1 text-xs")}>
 							<div>
 								<SocialLink
 									href={`mailto:${data.sites.email}`}
-									icon={<FaEnvelope className="size-3.5" />}
+									icon={<FaEnvelope className="h-3.5 w-3.5" />}
 								>
 									{data.sites.email}
 								</SocialLink>
 							</div>
 							<div>
-								<SocialLink href={data.sites.linkedin} icon={<FaLinkedin className="size-3.5" />}>
+								<SocialLink href={data.sites.linkedin} icon={<FaLinkedin className="h-3.5 w-3.5" />}>
 									{data.sites.linkedin.replace(/^https?:\/\//, "")}
 								</SocialLink>
 							</div>
 							<div>
-								<SocialLink href={data.sites.github} icon={<FaGithub className="size-3.5" />}>
+								<SocialLink href={data.sites.github} icon={<FaGithub className="h-3.5 w-3.5" />}>
 									{data.sites.github.replace(/^https?:\/\//, "")}
 								</SocialLink>
 							</div>
 							<div>
-								<SocialLink href={data.sites.blog} icon={<FaCode className="size-3.5" />}>
+								<SocialLink href={data.sites.blog} icon={<FaCode className="h-3.5 w-3.5" />}>
 									{data.sites.blog.replace(/^https?:\/\//, "")}
 								</SocialLink>
 							</div>
@@ -84,7 +85,8 @@ export const ResumePage1: FC = () => {
 							<TimelineItem
 								key={i}
 								endDate={experience.endDate ?? undefined}
-								icon={<FaCalendarAlt className="size-3" height={12} width={12} />}
+								// eslint-disable-next-line tailwindcss/enforces-shorthand
+								icon={<FaCalendarAlt className="h-3 w-3" height={12} width={12} />}
 								info={experience.info}
 								startDate={experience.startDate}
 								title={experience.company}
@@ -100,46 +102,48 @@ export const ResumePage1: FC = () => {
 					</Timeline>
 				</div>
 			</div>
-			<SideBar className={cn("flex shrink-0 flex-col gap-4", "w-1/3 p-4")}>
+			<SideBar className={cn("flex w-1/3 shrink-0 flex-col p-4")}>
 				<div>
 					<SideBarHeader>Summary</SideBarHeader>
-					<div className="mt-3 flex flex-col gap-2 text-xs leading-snug">
+					<div className="mt-3 flex flex-col text-xs leading-snug">
 						{data.summary.split(/\n+/g).map((paragraph, i) => (
-							<p key={i}>{paragraph}</p>
+							<p key={i} className={cn(!!i && "mt-2")}>
+								{paragraph}
+							</p>
 						))}
 					</div>
 				</div>
-				<SideBarDivider />
-				<div>
+				<SideBarDivider className="mt-4" />
+				<div className="mt-4">
 					<SideBarHeader>Skills</SideBarHeader>
-					<div className="flex flex-col gap-3">
+					<div className="flex flex-col">
 						<div className="text-xs leading-snug">
 							<SideBarSubHeader>Languages</SideBarSubHeader>
 							<p className="mt-2">{data.skills.languages.join(", ")}</p>
 						</div>
-						<div className="text-xs leading-snug">
+						<div className="mt-3 text-xs leading-snug">
 							<SideBarSubHeader>Frameworks</SideBarSubHeader>
 							<p className="mt-2">{data.skills.frameworks.join(", ")}</p>
 						</div>
-						<div className="text-xs leading-snug">
+						<div className="mt-3 text-xs leading-snug">
 							<SideBarSubHeader>Frontend</SideBarSubHeader>
 							<p className="mt-2">{data.skills.frontend.join(", ")}</p>
 						</div>
-						<div className="text-xs leading-snug">
+						<div className="mt-3 text-xs leading-snug">
 							<SideBarSubHeader>Backend</SideBarSubHeader>
 							<p className="mt-2">{data.skills.backend.join(", ")}</p>
 						</div>
-						<div className="text-xs leading-snug">
+						<div className="mt-3 text-xs leading-snug">
 							<SideBarSubHeader>Tooling + Services</SideBarSubHeader>
 							<p className="mt-2">{data.skills.tooling.join(", ")}</p>
 						</div>
-						<div className="text-xs leading-snug">
+						<div className="mt-3 text-xs leading-snug">
 							<SideBarSubHeader>Concepts + Misc.</SideBarSubHeader>
 							<p className="mt-2">{data.skills.concepts.join(", ")}</p>
 						</div>
 					</div>
 				</div>
-				{!!data.link && <ResumeLink link={data.link} />}
+				{!!data.link && <ResumeLink className="mt-4" link={data.link} />}
 			</SideBar>
 		</LetterPage>
 	);
