@@ -1,14 +1,15 @@
-import clsx from "clsx";
+import { oneLine } from "common-tags";
 import dayjs from "dayjs";
-import React, { CSSProperties, FC, ReactElement, ReactNode } from "react";
+import type { CSSProperties, FC, ReactElement, ReactNode } from "react";
+import { cn } from "../../utils/cn";
 
 export interface TimelineItemProps {
 	children?: ReactNode;
 	className?: string;
-	endDate?: Date | string
+	endDate?: Date | string;
 	icon: ReactElement;
 	info?: string;
-	startDate: Date | string
+	startDate: Date | string;
 	style?: CSSProperties;
 	subTitle?: string;
 	title: string;
@@ -27,35 +28,53 @@ export const TimelineItem: FC<TimelineItemProps> = ({
 }) => {
 	return (
 		<div
-			className={clsx(
-				"relative",
-				"flex items-start gap-3",
-				"before:content before:border before:border-solid before:border-indigo-800 dark:before:border-indigo-700 before:w-0",
-				"last:before:hidden",
-				"before:absolute before:top-6 before:left-[0.75rem] before:-bottom-[1rem]",
-				"before:-translate-x-1/2",
+			className={cn(
+				oneLine`
+					before:content
+					relative
+					flex
+					items-start
+					gap-3
+					before:absolute
+					before:-bottom-[1rem]
+					before:left-[0.75rem]
+					before:top-6
+					before:w-0
+					before:-translate-x-1/2
+					before:border
+					before:border-solid
+					before:border-indigo-800
+					last:before:hidden
+					dark:before:border-indigo-700
+				`,
 				className
 			)}
 			style={style}
 		>
 			<div
-				className={clsx(
-					"flex-shrink-0",
-					"flex items-center justify-center h-6 w-6",
-					"border border-solid border-indigo-500/60 rounded-full",
-					"bg-indigo-800 dark:bg-indigo-700 text-white",
-					"z-10"
+				className={cn(
+					oneLine`
+						z-10
+						flex
+						h-6
+						w-6
+						flex-shrink-0
+						items-center
+						justify-center
+						rounded-full
+						border
+						border-solid
+						border-indigo-500/60
+						bg-indigo-800
+						text-white
+						dark:bg-indigo-700
+					`
 				)}
 			>
 				{icon}
 			</div>
 			<div className="flex flex-col">
-				<h4
-					className={clsx(
-						"flex items-center gap-1.5 h-6",
-						"text-base font-medium leading-none"
-					)}
-				>
+				<h4 className={cn("flex h-6 items-center gap-1.5", "text-base font-medium leading-none")}>
 					<span>{title}</span>
 					{!!info && (
 						<>
@@ -63,30 +82,11 @@ export const TimelineItem: FC<TimelineItemProps> = ({
 						</>
 					)}
 				</h4>
-				{!!subTitle && (
-					<h5
-						className={clsx(
-							"text-sm leading-none italic mt-0.5"
-						)}
-					>
-						{subTitle}
-					</h5>
-				)}
-				<span
-					className={clsx(
-						"text-xs leading-none mt-1",
-						"text-gray-600 dark:text-gray-300/80"
-					)}
-				>
-					{dayjs(startDate).format("MMM YYYY")} -{" "}
-					{endDate ? dayjs(endDate).format("MMM YYYY") : "Present"}
+				{!!subTitle && <h5 className={cn("mt-0.5 text-sm italic leading-none")}>{subTitle}</h5>}
+				<span className={cn("mt-1 text-xs leading-none", "text-gray-600 dark:text-gray-300/80")}>
+					{dayjs(startDate).format("MMM YYYY")} - {endDate ? dayjs(endDate).format("MMM YYYY") : "Present"}
 				</span>
-				<div className={clsx(
-					"mt-2",
-					"text-xs text-gray-600 dark:text-gray-300/80"
-				)}>
-					{children}
-				</div>
+				<div className={cn("mt-2", "text-xs text-gray-600 dark:text-gray-300/80")}>{children}</div>
 			</div>
 		</div>
 	);

@@ -1,1 +1,1 @@
-export * from "./useDownloadDocx";
+export * from "./useNoSsr";

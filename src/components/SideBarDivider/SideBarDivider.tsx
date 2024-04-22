@@ -1,5 +1,5 @@
-import clsx from "clsx";
-import React, { CSSProperties, FC } from "react";
+import type { CSSProperties, FC } from "react";
+import { cn } from "../../utils/cn";
 
 export interface SideBarDividerProps {
 	className?: string;
@@ -7,13 +7,5 @@ export interface SideBarDividerProps {
 }
 
 export const SideBarDivider: FC<SideBarDividerProps> = ({ className, style }) => {
-	return (
-		<hr
-			className={clsx(
-				"h-0 w-full border-0 border-b border-solid border-white",
-				className
-			)}
-			style={style}
-		/>
-	)
+	return <hr className={cn("h-0 w-full border-0 border-b border-solid border-white", className)} style={style} />;
 };

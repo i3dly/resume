@@ -1,5 +1,5 @@
-import clsx from "clsx";
-import React, { CSSProperties, FC, ReactElement } from "react";
+import type { CSSProperties, FC, ReactElement } from "react";
+import { cn } from "../../utils/cn";
 import { Anchor } from "../Anchor";
 
 export interface SocialLinkProps {
@@ -13,10 +13,7 @@ export interface SocialLinkProps {
 export const SocialLink: FC<SocialLinkProps> = ({ children, className, href, icon, style }) => {
 	return (
 		<Anchor
-			className={clsx(
-				"inline-flex items-center gap-1.5",
-				className
-			)}
+			className={cn("inline-flex items-center gap-1.5", className)}
 			href={href}
 			rel="noreferrer noopener"
 			style={style}

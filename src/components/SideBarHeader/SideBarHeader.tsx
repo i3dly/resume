@@ -1,5 +1,5 @@
-import clsx from "clsx";
-import React, { CSSProperties, FC, ReactNode } from "react";
+import type { CSSProperties, FC, ReactNode } from "react";
+import { cn } from "../../utils/cn";
 
 export interface SideBarHeaderProps {
 	children?: ReactNode;
@@ -9,13 +9,7 @@ export interface SideBarHeaderProps {
 
 export const SideBarHeader: FC<SideBarHeaderProps> = ({ children, className, style }) => {
 	return (
-		<h3
-			className={clsx(
-				"mb-3 text-lg leading-none font-medium text-white uppercase",
-				className
-			)}
-			style={style}
-		>
+		<h3 className={cn("mb-3 text-lg font-medium uppercase leading-none text-white", className)} style={style}>
 			{children}
 		</h3>
 	);

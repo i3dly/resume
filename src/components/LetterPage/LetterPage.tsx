@@ -1,5 +1,7 @@
-import clsx from "clsx";
-import React, { CSSProperties, forwardRef, ReactNode } from "react";
+import { oneLine } from "common-tags";
+import type { CSSProperties, ReactNode } from "react";
+import { forwardRef } from "react";
+import { cn } from "../../utils/cn";
 
 export interface LetterPageProps {
 	children?: ReactNode;
@@ -13,12 +15,20 @@ export const LetterPage = forwardRef<HTMLDivElement, LetterPageProps>((props, re
 	return (
 		<div
 			ref={ref}
-			className={clsx(
-				"h-[11in] w-[8.5in]",
-				"border border-solid",
-				"bg-white border-gray-200",
-				"dark:bg-slate-800 dark:border-gray-700/75",
-				"transition-color ease-in-out duration-200",
+			className={cn(
+				oneLine`
+					transition-color
+					h-[11in]
+					w-[8.5in]
+					border
+					border-solid
+					border-gray-200
+					bg-white
+					duration-200
+					ease-in-out
+					dark:border-gray-700/75
+					dark:bg-slate-800
+				`,
 				className
 			)}
 			style={style}

@@ -1,5 +1,5 @@
-import clsx from "clsx";
-import React, { CSSProperties, FC, ReactNode } from "react";
+import type { CSSProperties, FC, ReactNode } from "react";
+import { cn } from "../../utils/cn";
 
 export interface TimelineProps {
 	children?: ReactNode;
@@ -7,19 +7,9 @@ export interface TimelineProps {
 	style?: CSSProperties;
 }
 
-export const Timeline: FC<TimelineProps> = ({
-	children,
-	className,
-	style
-}) => {
+export const Timeline: FC<TimelineProps> = ({ children, className, style }) => {
 	return (
-		<div
-			className={clsx(
-				"flex flex-col gap-4",
-				className
-			)}
-			style={style}
-		>
+		<div className={cn("flex flex-col gap-4", className)} style={style}>
 			{children}
 		</div>
 	);

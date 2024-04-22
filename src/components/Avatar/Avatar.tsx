@@ -1,6 +1,9 @@
-import clsx from "clsx";
-import NextImage from "next/image"
-import React, { CSSProperties, FC } from "react";
+"use client";
+
+import { oneLine } from "common-tags";
+import NextImage from "next/image";
+import type { CSSProperties, FC } from "react";
+import { cn } from "../../utils/cn";
 
 export interface AvatarProps {
 	className?: string;
@@ -10,12 +13,24 @@ export interface AvatarProps {
 export const Avatar: FC<AvatarProps> = ({ className, style }) => {
 	return (
 		<a
-			className={clsx(
-				"relative inline-flex items-stretch cursor-pointer",
-				"border-[4px] border-solid border-transparent rounded-full",
-				"bg-clip-padding",
-				"before:content before:absolute before:inset-0 before:-m-[4px] before:rounded-full",
-				"before:bg-makepurple-gradient",
+			className={cn(
+				oneLine`
+					before:content
+					relative
+					inline-flex
+					cursor-pointer
+					items-stretch
+					rounded-full
+					border-4
+					border-solid
+					border-transparent
+					bg-clip-padding
+					before:absolute
+					before:inset-0
+					before:-m-1
+					before:rounded-full
+					before:bg-makepurple-gradient
+				`,
 				className
 			)}
 			href="https://github.com/leedavidcs"
@@ -23,11 +38,7 @@ export const Avatar: FC<AvatarProps> = ({ className, style }) => {
 			style={style}
 			target="_blank"
 		>
-			<div
-				className={clsx(
-					"flex items-stretch overflow-hidden rounded-full z-10"
-				)}
-			>
+			<div className={cn("z-10 flex items-stretch overflow-hidden rounded-full")}>
 				<NextImage
 					alt="leedavidcs"
 					src="https://avatars.githubusercontent.com/u/15151154?v=4"

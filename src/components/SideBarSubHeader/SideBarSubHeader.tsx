@@ -1,5 +1,5 @@
-import clsx from "clsx";
-import React, { CSSProperties, FC, ReactNode } from "react";
+import type { CSSProperties, FC, ReactNode } from "react";
+import { cn } from "../../utils/cn";
 
 export interface SideBarSubHeaderProps {
 	children?: ReactNode;
@@ -7,19 +7,9 @@ export interface SideBarSubHeaderProps {
 	style?: CSSProperties;
 }
 
-export const SideBarSubHeader: FC<SideBarSubHeaderProps> = ({
-	children,
-	className,
-	style
-}) => {
+export const SideBarSubHeader: FC<SideBarSubHeaderProps> = ({ children, className, style }) => {
 	return (
-		<h4
-			className={clsx(
-				"text-sm leading-none font-medium underline",
-				className
-			)}
-			style={style}
-		>
+		<h4 className={cn("text-sm font-medium leading-none underline", className)} style={style}>
 			{children}
 		</h4>
 	);

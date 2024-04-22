@@ -1,42 +1,42 @@
 import { oneLine, stripIndents } from "common-tags";
 
 export type ProfessionalExperience = {
-    company: string;
-    jobTitle: string;
-    startDate: string;
+	company: string;
+	jobTitle: string;
+	startDate: string;
 	info?: string;
-    endDate: string | null;
-    highlights: readonly string[];
-}
+	endDate: string | null;
+	highlights: readonly string[];
+};
 
 export type ResumeData = {
-    link: string;
-    name: string;
-    jobTitle: string;
-    sites: {
-        email: string;
-        linkedin: string;
-        github: string;
-        blog: string;
-    };
-    summary: string;
-    skills: {
-        languages: readonly string[],
-        frameworks: readonly string[],
-        frontend: readonly string[],
-        backend: readonly string[],
-        tooling: readonly string[],
-        concepts: readonly string[]
-    };
-    education: {
+	link: string;
+	name: string;
+	jobTitle: string;
+	sites: {
+		email: string;
+		linkedin: string;
+		github: string;
+		blog: string;
+	};
+	summary: string;
+	skills: {
+		languages: readonly string[];
+		frameworks: readonly string[];
+		frontend: readonly string[];
+		backend: readonly string[];
+		tooling: readonly string[];
+		concepts: readonly string[];
+	};
+	education: {
 		degree: string;
 		college: string;
 		endDate: string;
 	};
-    experience: {
-        professional: readonly (ProfessionalExperience[])[]
-    };
-}
+	experience: {
+		professional: readonly ProfessionalExperience[][];
+	};
+};
 
 export const data: ResumeData = {
 	link: "https://resume.leedavidcs.dev",
@@ -46,7 +46,7 @@ export const data: ResumeData = {
 		email: "jobs.lee.david.cs@gmail.com",
 		linkedin: "https://linkedin.com/in/leedavidcs",
 		github: "https://github.com/leedavidcs",
-		blog: "https://makepurple.com/leedavidcs",
+		blog: "https://makepurple.com/leedavidcs"
 	},
 	summary: stripIndents`
 		${oneLine`
@@ -100,7 +100,7 @@ export const data: ResumeData = {
 			"Apollo Server",
 			"Express",
 			"Socket.io",
-			"NextAuth",
+			"NextAuth"
 		],
 		tooling: [
 			"Linux",
@@ -142,7 +142,7 @@ export const data: ResumeData = {
 			"Cypress",
 			"Jest",
 			"Changesets",
-			"Chromatic",
+			"Chromatic"
 		],
 		concepts: [
 			"SEO",
@@ -165,7 +165,7 @@ export const data: ResumeData = {
 			"Rate Limiting",
 			"Concurrency",
 			"API Caching",
-			"Monorepos",
+			"Monorepos"
 		]
 	},
 	education: {
@@ -213,7 +213,7 @@ export const data: ResumeData = {
 						oneLine`
 							Created serverless functions to reroute traffic from old sites and generate custom
 							README badges with metrics from Openbase for package maintainers.
-						`,
+						`
 					]
 				},
 				{
@@ -241,7 +241,7 @@ export const data: ResumeData = {
 						oneLine`
 							Implemented Vercel-style multi-project deployments for websocket
 							servers as a GitHub app, using CDKTF/Terraform, AWS (S3, SQS, ECR, Lambda) and wrangler.
-						`,
+						`
 					]
 				},
 				{
@@ -272,7 +272,7 @@ export const data: ResumeData = {
 							with Nexus + Prisma.
 						`
 					]
-				},
+				}
 			],
 			[
 				{
