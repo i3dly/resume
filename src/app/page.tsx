@@ -6,7 +6,7 @@ import { ResumePage1 } from "../components/ResumePage1";
 import { ResumePage2 } from "../components/ResumePage2";
 import { DownloadButton } from "../components/DownloadButton";
 
-export const Page: FC = async () => {
+const Page: FC = async () => {
 	const compiled = await compile(
 		<>
 			<CSS>{`
