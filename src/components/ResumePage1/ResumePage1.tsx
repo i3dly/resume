@@ -1,5 +1,4 @@
 /* eslint-disable tailwindcss/enforces-shorthand */
-import { oneLine } from "common-tags";
 import type { FC } from "react";
 import { FaCalendarAlt, FaCode, FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 import { data } from "../../resume-data";
@@ -19,17 +18,7 @@ import { TimelineItem } from "../TimelineItem";
 
 export const ResumePage1: FC = () => {
 	return (
-		<LetterPage
-			className={cn(
-				oneLine`
-                    flex
-                    flex-row-reverse
-                    items-stretch
-                    shadow-2xl
-                    dark:shadow-indigo-700/40
-                `
-			)}
-		>
+		<LetterPage className={cn("flex h-[1056px] flex-row-reverse items-stretch font-[inter]")}>
 			<div className="flex grow flex-col items-stretch">
 				<div
 					className={cn(
@@ -43,8 +32,8 @@ export const ResumePage1: FC = () => {
 					<div className="ml-4 min-w-0 grow basis-0">
 						<h1 className="text-3xl font-semibold leading-none">{data.name}</h1>
 						<h2 className="text-gray-600 dark:text-gray-300/80">{data.jobTitle}</h2>
-						<div className={cn("mt-2 grid grid-cols-2 gap-x-4 gap-y-1 text-xs")}>
-							<div>
+						<div className={cn("mt-2 flex w-full flex-wrap text-xs")}>
+							<div className="w-[184px] shrink-0 basis-[184px]">
 								<SocialLink
 									href={`mailto:${data.sites.email}`}
 									icon={<FaEnvelope className="h-3.5 w-3.5" />}
@@ -52,17 +41,17 @@ export const ResumePage1: FC = () => {
 									{data.sites.email}
 								</SocialLink>
 							</div>
-							<div>
+							<div className="ml-4 w-[184px] shrink-0 basis-[184px]">
 								<SocialLink href={data.sites.linkedin} icon={<FaLinkedin className="h-3.5 w-3.5" />}>
 									{data.sites.linkedin.replace(/^https?:\/\//, "")}
 								</SocialLink>
 							</div>
-							<div>
+							<div className="mt-1 w-[184px] shrink-0 basis-[184px]">
 								<SocialLink href={data.sites.github} icon={<FaGithub className="h-3.5 w-3.5" />}>
 									{data.sites.github.replace(/^https?:\/\//, "")}
 								</SocialLink>
 							</div>
-							<div>
+							<div className="ml-4 mt-1 w-[184px] shrink-0 basis-[184px]">
 								<SocialLink href={data.sites.blog} icon={<FaCode className="h-3.5 w-3.5" />}>
 									{data.sites.blog.replace(/^https?:\/\//, "")}
 								</SocialLink>
@@ -84,6 +73,7 @@ export const ResumePage1: FC = () => {
 						{data.experience.professional[0].map((experience, i) => (
 							<TimelineItem
 								key={i}
+								className={cn(!!i && "mt-4")}
 								endDate={experience.endDate ?? undefined}
 								// eslint-disable-next-line tailwindcss/enforces-shorthand
 								icon={<FaCalendarAlt className="h-3 w-3" height={12} width={12} />}
@@ -94,7 +84,9 @@ export const ResumePage1: FC = () => {
 							>
 								<BulletedList>
 									{experience.highlights.map((highlight, j) => (
-										<BulletedListItem key={j}>{highlight}</BulletedListItem>
+										<BulletedListItem key={j} className={cn(!!j && "mt-1")}>
+											{highlight}
+										</BulletedListItem>
 									))}
 								</BulletedList>
 							</TimelineItem>

@@ -9,7 +9,7 @@ export interface TimelineProps {
 
 export const Timeline: FC<TimelineProps> = ({ children, className, style }) => {
 	return (
-		<div className={cn("flex flex-col gap-4", className)} style={style}>
+		<div className={cn("flex flex-col", className)} style={style}>
 			{children}
 		</div>
 	);

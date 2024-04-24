@@ -12,7 +12,7 @@ export const PageContainer: FC<PageContainerProps> = ({ children, className, sty
 		<div
 			className={clsx(
 				"flex flex-col items-center",
-				"min-w-screen min-h-screen py-8",
+				"min-w-screen min-h-screen py-4",
 				"bg-slate-50 dark:bg-slate-900",
 				"transition-colors duration-200 ease-in-out",
 				"text-black dark:text-sky-500",

@@ -9,7 +9,7 @@ export interface BulletedListProps {
 
 export const BulletedList: FC<BulletedListProps> = ({ children, className, style }) => {
 	return (
-		<ul className={cn("flex flex-col gap-1", className)} style={style}>
+		<ul className={cn("flex flex-col", className)} style={style}>
 			{children}
 		</ul>
 	);

@@ -18,8 +18,11 @@ export const LetterPage = forwardRef<HTMLDivElement, LetterPageProps>((props, re
 			className={cn(
 				oneLine`
 					transition-color
-					h-[11.7in]
-					w-[8.3in]
+					h-full
+					max-h-[11in]
+					min-h-0
+					w-full
+					max-w-[8.5in]
 					border
 					border-solid
 					border-gray-200

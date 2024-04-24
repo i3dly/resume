@@ -82,10 +82,10 @@ export const TimelineItem: FC<TimelineItemProps> = ({
 					)}
 				</h4>
 				{!!subTitle && <h5 className={cn("mt-0.5 text-sm italic leading-none")}>{subTitle}</h5>}
-				<span className={cn("mt-1 text-xs leading-none", "text-gray-600 dark:text-gray-300/80")}>
+				<span className={cn("mt-1 text-xs leading-none text-gray-600 dark:text-gray-300/80")}>
 					{dayjs(startDate).format("MMM YYYY")} - {endDate ? dayjs(endDate).format("MMM YYYY") : "Present"}
 				</span>
-				<div className={cn("mt-2", "text-xs text-gray-600 dark:text-gray-300/80")}>{children}</div>
+				<div className={cn("mt-2 text-xs text-gray-600 dark:text-gray-300/80")}>{children}</div>
 			</div>
 		</div>
 	);

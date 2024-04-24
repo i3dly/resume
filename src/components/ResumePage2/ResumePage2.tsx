@@ -17,7 +17,7 @@ const experiences = data.experience.professional[1];
 
 export const ResumePage2: FC = () => {
 	return (
-		<LetterPage className={cn("flex flex-row-reverse items-stretch", "shadow-2xl dark:shadow-indigo-700/40")}>
+		<LetterPage className={cn("flex h-[1056px] flex-row-reverse items-stretch font-[inter]")}>
 			<div className="flex grow flex-col items-stretch py-4">
 				<div className="flex flex-col items-stretch px-4">
 					<h3
@@ -31,9 +31,10 @@ export const ResumePage2: FC = () => {
 						<span className={cn("text-sm", "text-gray-600 dark:text-gray-300/80")}>(continued)</span>
 					</h3>
 					<Timeline className="mt-4">
-						{experiences.map((experience, j) => (
+						{experiences.map((experience, i) => (
 							<TimelineItem
-								key={j}
+								key={i}
+								className={cn(!!i && "mt-4")}
 								endDate={experience.endDate ?? undefined}
 								// eslint-disable-next-line tailwindcss/enforces-shorthand
 								icon={<FaCalendarAlt className="h-3 w-3" height={12} width={12} />}
@@ -59,9 +60,9 @@ export const ResumePage2: FC = () => {
 					<SideBarHeader>Education</SideBarHeader>
 					<SideBarSubHeader>{data.education.degree}</SideBarSubHeader>
 					<div className="mt-2 text-xs">{data.education.college}</div>
-					<div className="mt-1 flex items-center gap-2 text-xs">
+					<div className="mt-1 flex items-center text-xs">
 						<FaCalendarAlt />
-						<span>Graduated: {dayjs(data.education.endDate).format("MMMM YYYY")}</span>
+						<span className="ml-2">Graduated: {dayjs(data.education.endDate).format("MMMM YYYY")}</span>
 					</div>
 				</div>
 				{!!data.link && <ResumeLink className="mt-4" link={data.link} />}
