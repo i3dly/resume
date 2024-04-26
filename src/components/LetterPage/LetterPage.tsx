@@ -22,6 +22,7 @@ export const LetterPage = forwardRef<HTMLDivElement, LetterPageProps>((props, re
 					max-h-[11in]
 					min-h-0
 					w-full
+					min-w-[8.5in]
 					max-w-[8.5in]
 					border
 					border-solid

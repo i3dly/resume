@@ -27,7 +27,7 @@ const Page: FC = async () => {
 				<DarkModeSwitch />
 				<DownloadButton />
 			</div>
-			<div className="mt-4" dangerouslySetInnerHTML={{ __html: compiled }} />
+			<div className="mt-4 flex flex-col gap-4" dangerouslySetInnerHTML={{ __html: compiled }} />
 		</PageContainer>
 	);
 };
