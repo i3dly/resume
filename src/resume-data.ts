@@ -41,7 +41,7 @@ export type ResumeData = {
 export const data: ResumeData = {
 	link: "https://resume.leedavidcs.dev",
 	name: "David Lee",
-	jobTitle: "Staff Software Engineer",
+	jobTitle: "Staff Software Engineer / Engineering Lead",
 	sites: {
 		email: "jobs.lee.david.cs@gmail.com",
 		linkedin: "https://linkedin.com/in/leedavidcs",
@@ -60,18 +60,19 @@ export const data: ResumeData = {
 			Demonstrated skill in architecting greenfield applications, researching emerging
 			technologies, improving the developer experience, and working in distributed teams.
 		`}
+		${oneLine`Enjoyer of Cloudflare Workers. 🚀`}
 	`,
 	skills: {
 		languages: ["TypeScript", "JavaScript"],
-		frameworks: ["Next.js", "Astro", "Remix", "Gatsby", "Nest.js"],
+		frameworks: ["Next.js", "Remix", "Nest.js"],
 		frontend: [
 			"HTML5",
 			"CSS3",
 			"React",
 			"Urql",
 			"Apollo Client",
-			"Styled-Components",
 			"Tailwind CSS",
+			"Styled-Components",
 			"Visx",
 			"D3",
 			"Recharts",
@@ -88,19 +89,23 @@ export const data: ResumeData = {
 		],
 		backend: [
 			"Node.js",
-			"Cloudflare Workers",
 			"Serverless",
-			"GraphQL",
-			"tRPC",
-			"Prisma",
-			"Nexus",
+			"Cloudflare Workers",
+			"Cloudflare Durable Objects",
+			"Cloudflare D1",
 			"Postgres",
 			"MongoDB",
 			"Redis",
 			"Apollo Server",
+			"GraphQL",
+			"Drizzle",
+			"Prisma",
+			"Nexus",
 			"Express",
 			"Socket.io",
-			"NextAuth"
+			"tRPC",
+			"NextAuth",
+			"Lucia"
 		],
 		tooling: [
 			"Linux",
@@ -113,35 +118,33 @@ export const data: ResumeData = {
 			"Webpack",
 			"pnpm workspaces",
 			"GraphQL-Codegen",
-			"Terraform",
-			"CDKTF",
-			"Turborepo",
-			"Docker",
 			"GitHub Actions",
 			"AWS",
-			"Vercel",
-			"Netlify",
 			"Cloudflare",
-			"Upstash",
-			"NeonDB",
-			"Confluence",
+			"Netlify",
+			"Vercel",
+			"Pulumi",
+			"CDKTF",
+			"Terraform",
+			"Turborepo",
+			"Docker",
 			"Amplitude",
-			"Notion",
-			"Jira",
 			"Google Analytics",
-			"Segment",
-			"Sentry",
-			"Postmark",
-			"Octokit",
 			"Algolia",
-			"Stripe",
-			"Twilio",
-			"Stellate",
+			"Sentry",
+			"Notion",
+			"Segment",
+			"Upstash",
+			"Postmark",
 			"Cloudinary",
+			"Changesets",
 			"Playwright",
 			"Cypress",
 			"Jest",
-			"Changesets",
+			"Octokit",
+			"Stellate",
+			"Stripe",
+			"Twilio",
 			"Chromatic"
 		],
 		concepts: [
@@ -156,16 +159,19 @@ export const data: ResumeData = {
 			"Image Optimization",
 			"Lighthouse",
 			"Code-splitting",
-			"DB Seeding",
-			"DB Normalization",
+			"Lazy Loading",
+			"PubSub",
 			"GraphQL APQ",
-			"CRDTs",
-			"Windowing",
-			"IP Blacklisting",
+			"DB Normalization",
+			"DB Sharding",
+			"Caching",
+			"N+1",
 			"Rate Limiting",
+			"IP Blacklisting",
+			"Windowing",
 			"Concurrency",
-			"API Caching",
-			"Monorepos"
+			"Monorepos",
+			"CRDTs"
 		]
 	},
 	education: {
@@ -177,11 +183,32 @@ export const data: ResumeData = {
 		professional: [
 			[
 				{
+					company: "KarmaSuite",
+					jobTitle: "Staff Engineer / Engineering Lead",
+					startDate: "03/27/2023",
+					endDate: null,
+					highlights: [
+						oneLine`
+							Architected the initial KarmaSuite application as the 1st engineer (using
+							Next.js, Turborepo, Next.js, Tailwind CSS, tRPC, prisma, and Storybook).
+						`,
+						oneLine`
+							Invented a highly performant algorithm to allocate tens of thousands
+							of expenses to restricted grants & contracts that minimizes wasted dollars
+							for non-profits.
+						`,
+						oneLine`
+							Unified and integrated 3rd party accounting APIs (e.g. QuickBooks, NetSuite,
+							etc.) to ETL pipelines so that data can be written to and from KarmaSuite.
+						`
+					]
+				},
+				{
 					company: "Openbase",
 					info: "shut-down",
 					jobTitle: "Staff Frontend Engineer",
 					startDate: "04/01/2021",
-					endDate: null,
+					endDate: "02/17/2023",
 					highlights: [
 						oneLine`
 							Proposed then executed a gradual migration strategy to port the frontend
@@ -243,18 +270,18 @@ export const data: ResumeData = {
 							servers as a GitHub app, using CDKTF/Terraform, AWS (S3, SQS, ECR, Lambda) and wrangler.
 						`
 					]
-				},
+				}
+			],
+			[
 				{
 					company: "MakePurple",
 					jobTitle: "Project Owner",
 					startDate: "09/01/2021",
-					endDate: null,
+					endDate: "04/12/2022",
 					highlights: [
 						oneLine`
-							Built with Next.js, NextAuth, Prisma, Nexus, Apollo Server,
-							Styled-Components, Twin.Macro, TailwindCSS, Urql, Storybook, PlanetScale,
-							Upstash, Cloudinary, Postmark, Pusher, Octokit, Figma, Pnpm workspaces and
-							Turborepo.
+							Built with Next.js, NextAuth, Prisma, Nexus, Apollo Server, TailwindCSS,
+							Urql, Storybook, PlanetScale, Upstash, Octokit, Pnpm workspaces and Turborepo.
 						`,
 						oneLine`
 							Authored an internal CSS-in-JS library for emails in React, a rich text
@@ -266,15 +293,12 @@ export const data: ResumeData = {
 							navigation with Radix and Headless UI.
 						`,
 						oneLine`
-							Implemented GraphQL resolvers for: activity feeds, GitHub follows,
-							Cloudinary image uploads, Pusher real-time chat, GitHub skill and user
-							search, connection suggestions, notifications, nested commenting, and CRUD
-							with Nexus + Prisma.
+							Implemented GraphQL for: activity feeds, GitHub operations,
+							file uploads, friend suggestions, real-time chat, notifications,
+							and comments with Nexus + Prisma.
 						`
 					]
-				}
-			],
-			[
+				},
 				{
 					company: "Toastel",
 					info: "shut-down",
@@ -308,7 +332,7 @@ export const data: ResumeData = {
 							Apollo.
 						`,
 						oneLine`
-							Implemented GraphQL resolvers for: full-text search with Algolia, emails
+							Implemented GraphQL for: full-text search with Algolia, emails
 							with Nodemailer, subscriptions and payouts with Stripe, presigned URL
 							uploads with S3, localized timezones with Google Maps, and CRUD with Nexus
 							+ Prisma.
@@ -317,7 +341,7 @@ export const data: ResumeData = {
 				},
 				{
 					company: "Onfleet",
-					jobTitle: "Full Stack Engineer",
+					jobTitle: "Senior Full Stack Engineer",
 					startDate: "01/01/2019",
 					endDate: "01/01/2020",
 					highlights: [
@@ -339,53 +363,37 @@ export const data: ResumeData = {
 				},
 				{
 					company: "Outward",
-					info: "acquired",
+					info: "acquired by Williams Sonoma",
 					jobTitle: "Senior Software Engineer",
 					startDate: "01/01/2018",
 					endDate: "01/01/2019",
 					highlights: [
 						oneLine`
-							Implemented all client-side features for a 3D monogramming web-app that
-							supports more use-cases and produces higher-fidelity product images than
-							Adobe's Scene7 for Williams-Sonoma (built with React, TypeScript, JSS,
-							Apollo, GraphQL, Pixi, Babylon).
+							Implemented a monogramming app that used WebGL to enable customers to
+							apply custom texts and images as textures over 3d meshes using React,
+							TypeScript, JSS, Apollo, GraphQL, Pixi.js and Babylon.js.
 						`,
 						oneLine`
-							Mentored Junior Frontend Engineers; worked with project managers in driving
-							requirements and timelines; interfaced directly with clients to assist
-							integration; and organized and led meetings with QA, graphics and the
-							dev-ops teams to coordinate successful releases and milestones.
+							Mentored junior engineers; drove requirements and timelines with managers;
+							interfaced with clients to guide integration; and facilitated meetings with
+							QA, graphics and the infra teams to coordinate successful releases and
+							milestones.
 						`,
 						oneLine`
-							Created a RESTful service for Bassett Furniture's new consumer site,
-							including customer/designer interactions and authentication (built with
-							TypeScript + Koa).
+							Built a REST api with authentication (with Koa.js, Mongoose and Passport.js)
+							to power Bassett Furniture's new store site (React, Redux Observable and JSS).
 						`,
 						oneLine`
-							Architected new client site with TypeScript, React, Redux Observable and
-							JSS.
-						`,
-						oneLine`
-							Authored an internal library to gradually migrate a legacy vanilla ES5 app
-							to React, while increasing test coverage from 0 to 60%.
-						`,
-						oneLine`
-							Set-up a CI/CD pipeline using TravisCI, SonarQube, Jest and ESLint.
+							Authored a library to bridge a legacy ES5 app to React, and set-up a
+							CI/CD pipeline using TravisCI, SonarQube, Jest and ESLint.
 						`
 					]
 				},
 				{
-					company: "Newport Asia",
-					jobTitle: "Contract Software Engineer",
-					startDate: "06/01/2016",
-					endDate: "12/01/2017",
-					highlights: []
-				},
-				{
-					company: "Bosera Funds",
-					jobTitle: "Intern Software Engineer",
+					company: "Bosera Funds & Newport Asia",
+					jobTitle: "Software Engineer",
 					startDate: "06/01/2015",
-					endDate: "06/01/2016",
+					endDate: "12/01/2017",
 					highlights: []
 				}
 			]

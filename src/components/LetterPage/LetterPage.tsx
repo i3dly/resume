@@ -20,7 +20,7 @@ export const LetterPage = forwardRef<HTMLDivElement, LetterPageProps>((props, re
 					transition-color
 					h-full
 					max-h-[11in]
-					min-h-0
+					min-h-[11in]
 					w-full
 					min-w-[8.5in]
 					max-w-[8.5in]
