@@ -34,7 +34,7 @@ export const ResumePage2: FC = () => {
 						{experiences.map((experience, i) => (
 							<TimelineItem
 								key={i}
-								className={cn(!!i && "mt-4")}
+								className={cn(!!i && "mt-3")}
 								endDate={experience.endDate ?? undefined}
 								// eslint-disable-next-line tailwindcss/enforces-shorthand
 								icon={<FaCalendarAlt className="h-3 w-3" height={12} width={12} />}

@@ -189,17 +189,53 @@ export const data: ResumeData = {
 					endDate: null,
 					highlights: [
 						oneLine`
-							Architected the initial KarmaSuite application as the 1st engineer (using
-							Next.js, Turborepo, Next.js, Tailwind CSS, tRPC, prisma, and Storybook).
+							Architected and built the bulk of the initial KarmaSuite application as
+							the 1st engineer (using Next.js, Turborepo, Tailwind CSS, tRPC, prisma,
+							and Storybook).
 						`,
 						oneLine`
 							Invented a highly performant algorithm to allocate tens of thousands
-							of expenses to restricted grants & contracts that minimizes wasted dollars
-							for non-profits.
+							of expenses to restricted funding sources that minimizes wasted dollars
+							for non-profits using partitioning, set theory and hot-swappable heuristics
+							for an A* algorithm.
 						`,
 						oneLine`
 							Unified and integrated 3rd party accounting APIs (e.g. QuickBooks, NetSuite,
 							etc.) to ETL pipelines so that data can be written to and from KarmaSuite.
+						`,
+						oneLine`
+							Denormalized database tables to support more performant bulk reads and
+							writes of thousands of data rows in crons and long-lived background tasks.
+						`,
+						oneLine`
+							Implemented cache and SWR strategies for expensive state calculations.
+						`
+					]
+				},
+				{
+					company: "@pluv/io",
+					jobTitle: "Open Source (npm)",
+					startDate: "08/01/2022",
+					endDate: null,
+					highlights: [
+						oneLine`
+							Built real-time packages for multiple runtimes (Node.js and Cloudflare
+							Workers), with support for end-to-end type safety, authentication,
+							custom events, rooms, awareness + presence and CRDT storage (with yjs
+							and loro-crdt).
+						`,
+						oneLine`
+							Configured git and npm management with Commitizen, Changeset, Renovate,
+							Kodiak and GitHub Actions.
+						`,
+						oneLine`
+							Added E2E tests with Playwright, simulating runs on singular and
+							distributed Node.js servers and Cloudflare Worker durable objects.
+						`,
+						oneLine`
+							Currently building an automated multi-project deployment PaaS as a
+							GitHub app using CDKTF/Terraform, AWS (ECR, Lambda), Cloudflare
+							(Workers, D1, Durable Objects), and QStash.
 						`
 					]
 				},
@@ -231,43 +267,18 @@ export const data: ResumeData = {
 							user aquisition and retention.
 						`,
 						oneLine`
-							Mentored such topics including Next.js, GraphQL + Apollo, Storybook, and more.
-						`,
-						oneLine`
 							Authored a split-testing framework that integrated with Google Analytics and
 							Amplitude to a/b test by segmenting users by percentage or special conditions.
 						`,
 						oneLine`
-							Created serverless functions to reroute traffic from old sites and generate custom
-							README badges with metrics from Openbase for package maintainers.
-						`
-					]
-				},
-				{
-					company: "@pluv/io",
-					jobTitle: "Open Source (npm)",
-					startDate: "08/01/2022",
-					endDate: null,
-					highlights: [
-						oneLine`
-							Created E2E type-safe, real-time packages for Node.js and Cloudflare
-							Workers.
+							Created serverless functions to reroute traffic from old sites and
+							generate custom README badges with metrics from Openbase for package
+							maintainers.
 						`,
 						oneLine`
-							Built with support for automatic type safety, authentication, custom
-							events, rooms, awareness + presence and CRDT storage (with yjs).
-						`,
-						oneLine`
-							Configured git and npm management with Commitizen, Changeset, Renovate,
-							Kodiak and GitHub Actions.
-						`,
-						oneLine`
-							Added E2E tests with Playwright, simulating runs on singular and
-							distributed Node.js servers, and Cloudflare Worker durable objects.
-						`,
-						oneLine`
-							Implemented Vercel-style multi-project deployments for websocket
-							servers as a GitHub app, using CDKTF/Terraform, AWS (S3, SQS, ECR, Lambda) and wrangler.
+							Significantly improved complex data-grid performances through windowing
+							and minimizing re-renders via memoization and careful opt-outs of state
+							updates.
 						`
 					]
 				}
