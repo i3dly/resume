@@ -208,7 +208,7 @@ export const data: ResumeData = {
 							writes of thousands of data rows in crons and long-lived background tasks.
 						`,
 						oneLine`
-							Implemented cache and SWR strategies for expensive state calculations.
+							Created and reviewed numerous PRDs, RFCs and TADs for the engineering org.
 						`
 					]
 				},
