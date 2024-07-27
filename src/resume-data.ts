@@ -60,7 +60,7 @@ export const data: ResumeData = {
 			Demonstrated skill in architecting greenfield applications, researching emerging
 			technologies, improving the developer experience, and working in distributed teams.
 		`}
-		${oneLine`Enjoyer of Cloudflare Workers. 🚀`}
+		${oneLine`Enjoyer of React + Cloudflare Workers. 🚀`}
 	`,
 	skills: {
 		languages: ["TypeScript", "JavaScript"],
@@ -91,21 +91,21 @@ export const data: ResumeData = {
 			"Node.js",
 			"Serverless",
 			"Cloudflare Workers",
-			"Cloudflare Durable Objects",
-			"Cloudflare D1",
+			"D1",
 			"Postgres",
 			"MongoDB",
-			"Redis",
-			"Apollo Server",
-			"GraphQL",
 			"Drizzle",
 			"Prisma",
+			"Redis",
+			"GraphQL",
+			"Apollo Server",
 			"Nexus",
+			"Hono",
 			"Express",
 			"Socket.io",
 			"tRPC",
+			"Lucia",
 			"NextAuth",
-			"Lucia"
 		],
 		tooling: [
 			"Linux",
@@ -121,8 +121,8 @@ export const data: ResumeData = {
 			"GitHub Actions",
 			"AWS",
 			"Cloudflare",
-			"Netlify",
 			"Vercel",
+			"Netlify",
 			"Pulumi",
 			"CDKTF",
 			"Terraform",
@@ -151,27 +151,30 @@ export const data: ResumeData = {
 			"SEO",
 			"A11y",
 			"I18n",
-			"ISR",
 			"SSR",
+			"CSR",
+			"ISR",
+			"SSG",
+			"PPR",
 			"Atomic Design",
+			"Image Optimization",
 			"JWT",
 			"Authorization",
-			"Image Optimization",
 			"Lighthouse",
 			"Code-splitting",
 			"Lazy Loading",
 			"PubSub",
-			"GraphQL APQ",
 			"DB Normalization",
 			"DB Sharding",
 			"Caching",
+			"GraphQL APQ",
 			"N+1",
 			"Rate Limiting",
 			"IP Blacklisting",
+			"CRDTs",
 			"Windowing",
 			"Concurrency",
 			"Monorepos",
-			"CRDTs"
 		]
 	},
 	education: {
@@ -191,13 +194,7 @@ export const data: ResumeData = {
 						oneLine`
 							Architected and built the bulk of the initial KarmaSuite application as
 							the 1st engineer (using Next.js, Turborepo, Tailwind CSS, tRPC, prisma,
-							and Storybook).
-						`,
-						oneLine`
-							Invented a highly performant algorithm to allocate tens of thousands
-							of expenses to restricted funding sources that minimizes wasted dollars
-							for non-profits using partitioning, set theory and hot-swappable heuristics
-							for an A* algorithm.
+							and Storybook), including an atomic design system with Radix UI.
 						`,
 						oneLine`
 							Unified and integrated 3rd party accounting APIs (e.g. QuickBooks, NetSuite,
@@ -206,6 +203,12 @@ export const data: ResumeData = {
 						oneLine`
 							Denormalized database tables to support more performant bulk reads and
 							writes of thousands of data rows in crons and long-lived background tasks.
+						`,
+						oneLine`
+							Invented a highly performant algorithm to allocate tens of thousands
+							of expenses to restricted funding sources that minimizes wasted dollars
+							for non-profits using partitioning, set theory and hot-swappable heuristics
+							for an A* algorithm.
 						`,
 						oneLine`
 							Created and reviewed numerous PRDs, RFCs and TADs for the engineering org.
@@ -219,10 +222,10 @@ export const data: ResumeData = {
 					endDate: null,
 					highlights: [
 						oneLine`
-							Built real-time packages for multiple runtimes (Node.js and Cloudflare
-							Workers), with support for end-to-end type safety, authentication,
-							custom events, rooms, awareness + presence and CRDT storage (with yjs
-							and loro-crdt).
+							Built real-time, typesafe packages for multiple runtimes (Node.js and
+							Cloudflare Workers) and frontend frameworks (e.g. react), supporting
+							authentication, rooms, custom events, awareness + presence and CRDT
+							storage (with yjs and loro-crdt).
 						`,
 						oneLine`
 							Configured git and npm management with Commitizen, Changeset, Renovate,
@@ -234,9 +237,13 @@ export const data: ResumeData = {
 						`,
 						oneLine`
 							Currently building an automated multi-project deployment PaaS as a
-							GitHub app using CDKTF/Terraform, AWS (ECR, Lambda), Cloudflare
-							(Workers, D1, Durable Objects), and QStash.
-						`
+							GitHub app using Next.js, CDKTF/Terraform, AWS (ECR, Lambda), Cloudflare
+							(Pages, Workers, D1, Durable Objects), and QStash.
+						`,
+						oneLine`
+							Migrated both doc and PaaS sites from Next.js pages directory to the
+							app router.
+						`,
 					]
 				},
 				{
@@ -252,7 +259,7 @@ export const data: ResumeData = {
 							Codegen.
 						`,
 						oneLine`
-							Improved performance, a11y and SEO to boost Lighthouse scores from 20 to 90.
+							Improved web vitals, a11y and SEO to boost Lighthouse scores from <20 to >90.
 						`,
 						oneLine`
 							Architected the frontend application and implemented many features with
@@ -260,15 +267,12 @@ export const data: ResumeData = {
 						`,
 						oneLine`
 							Created an Algolia-Apollo interoperability module to power Openbase's search,
-							that populated @apollo/client's normalized cache.
+							that populated @apollo/client's normalized cache, compatible with Next.js SSR.
 						`,
 						oneLine`
-							Pitched and executed on experiments in product feature ideation to drive
-							user aquisition and retention.
-						`,
-						oneLine`
-							Authored a split-testing framework that integrated with Google Analytics and
-							Amplitude to a/b test by segmenting users by percentage or special conditions.
+							Authored an a/b + split-testing framework that integrated with Google
+							Analytics and Amplitude that segmented users by percentage or special
+							conditions.
 						`,
 						oneLine`
 							Created serverless functions to reroute traffic from old sites and
@@ -286,7 +290,7 @@ export const data: ResumeData = {
 			[
 				{
 					company: "MakePurple",
-					jobTitle: "Project Owner",
+					jobTitle: "Website Project",
 					startDate: "09/01/2021",
 					endDate: "04/12/2022",
 					highlights: [
